@@ -1,0 +1,671 @@
+
+$max-width: 970px;
+// bower:scss
+@import "bourbon/app/assets/stylesheets/_bourbon.scss";
+@import "neat/app/assets/stylesheets/_neat.scss";
+// endbower
+@import "../fonts/fonts";
+
+
+$yellow: #ffd475;
+$link: #feedbc;
+$brun: #867C5F;
+$red : #9c110c;
+$green: #78970B;
+$alt-yellow: #FFEEBD;
+
+.clearfix{
+  clear:both;
+  float:none;
+}
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+html{
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background: radial-gradient(ellipse at center,#ea1b25 0%,  #c1131a 10%, #670001 70%)
+}
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+div.container{
+    @include outer-container;
+}
+
+div.header{
+  background: url("../images/woodboard.png") center center no-repeat;
+  max-width: 950px;
+  height: 110px;
+  margin: 10px auto 35px auto;
+  padding-top: 48px;
+
+  ul.nav{
+    list-style: none;
+    li{
+      display: inline-block;
+      width: 140px;
+      text-align: center;
+      a{
+        font-family: "Toonish", Arial, Helvetica, sans-serif;
+        color: $brun;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #30160A;
+        @include transition(all 0.2s ease);
+
+        &:hover{
+          color: $alt-yellow;
+          text-shadow: 0px 0px 20px #FFFFFF;
+        }
+      }
+      &.spacer{
+        width: 300px;
+      }
+    }
+  }
+}
+
+
+div.footer{
+
+  &>div.container{
+    border-top: 1px solid $alt-yellow;
+    margin-bottom:20px;
+    &>div{
+      @include span-columns(6);
+      margin-top: 10px;
+      color: $alt-yellow;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 11px;
+      line-height: 14px;
+      p{
+        margin: 0;
+      }
+      &:last-child{
+        text-align: right;
+      }
+    }
+  }
+}
+
+.animate-repeat {
+  line-height:30px;
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+  transition:all linear 0.5s;
+}
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+  opacity:0;
+  max-height:0;
+}
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:30px;
+}
+
+.home-screen{
+  margin: 0 5px 25px 5px;
+  padding: 16px;
+  @include background(linear-gradient(rgb(248, 212, 114), rgb(251, 238, 185)) left repeat);
+
+  .leftbar{
+    width:220px;
+    float:left;
+  }
+
+  .bienvenue{
+    font-family: 'Ballpark-Weiner';
+    font-weight: 400;
+    font-size: 28px;
+    color: $yellow;
+    background: url(../images/welcomebg.png) no-repeat center center;
+    width: 220px;
+    height: 54px;
+    line-height: 60px;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+  }
+
+  .horaires, .salle{
+    font-family: 'MankSans';
+    font-size: 16px;
+    width: 220px;
+    text-align: center;
+    color: $red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .salle{
+    font-size: 15px;
+    text-transform: uppercase;
+    border-top: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
+    padding: 5px 0;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+
+  .phone,.adresse{
+
+    border-radius: 5px;
+    background: $red;
+    color: white;
+    font-family: 'BorisBlackBloxx';
+    font-size: 24px;
+    box-shadow: 3px 4px 5px 0px rgba(62, 51, 41, 0.75);
+    width: 220px;
+    text-align: center;
+    margin-top: 45px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 25px;
+      height: 40px;
+      position: absolute;
+      top:-42px;
+      left: 50%;
+      margin-left: -12.5px;
+      background: url('../images/p.png') no-repeat center center / cover;
+    }
+  }
+  .adresse{
+    font-size: 12px;
+    padding: 2px 0;
+    span{
+      font-size: 16px;
+    }
+
+    &:before{
+      content: "";
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      top:-32px;
+      left: 50%;
+      margin-left: -16.5px;
+      background: url('../images/m.png') no-repeat center center / cover;
+    }
+  }
+
+  .content{
+    width: 705px;
+    float:left;
+    padding-left:20px;
+    .img{
+      width: 688px;
+      height: 338px;
+      background:transparent url('../images/banner_frame.png') left top no-repeat;
+      padding:0 5px;
+    }
+
+    .ct-block{
+      position:relative;
+      & > div{
+        position:absolute;
+      }
+    }
+
+    .livraison{
+      left: 10px;
+      top: -15px;
+      a{
+        position: absolute;
+        top:15px;
+        right:40px;
+        transition: all 0.2s ease;
+        &:hover{
+          -webkit-filter: saturate(5);
+        }
+      }
+    }
+
+    .news{
+      background:transparent url('../images/home_news.png') left top no-repeat;
+      width: 382px;
+      height: 107px;
+      right: -15px;
+      top: -25px;
+      padding: 40px 25px 15px 32px;
+    }
+  }
+}
+
+.contact-screen{
+  margin: 0 5px 25px 5px;
+  padding: 45px 45px 15px 45px ;
+  @include background(linear-gradient(rgb(248, 212, 114), rgb(251, 238, 185)) left repeat);
+
+  .leftbar{
+    width:350px;
+    float:left;
+  }
+  .infos{
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+  .phone,.adresse, .horaires .bloc, .livraison .bloc{
+
+    border-radius: 5px;
+    background: $red;
+    color: white;
+    font-family: 'BorisBlackBloxx';
+    font-size: 24px;
+    box-shadow: 3px 4px 5px 0px rgba(62, 51, 41, 0.75);
+    width: 200px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left:50px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 25px;
+      height: 48px;
+      position: absolute;
+      top:-6px;
+      left: -40px;
+      background: url('../images/phone.png') no-repeat center center / cover;
+    }
+  }
+
+  .adresse{
+    font-size: 12px;
+    padding: 2px 0;
+    span{
+      font-size: 16px;
+    }
+
+    &:before{
+      content: "";
+      width: 42px;
+      height: 33px;
+      position: absolute;
+      top:8px;
+      left: -50px;
+      background: url('../images/m.png') no-repeat center center / cover;
+    }
+  }
+
+  .horaires {
+    .bloc{
+      font-size: 14px;
+      padding: 2px 0;
+
+
+      &:before{
+        content: "";
+        width: 39px;
+        height: 38px;
+        position: absolute;
+        top:5px;
+        left: -45px;
+        background: url('../images/horraire.png') no-repeat center center / cover;
+      }
+    }
+    span{
+      font-size: 14px;
+      color: $red;
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      display:block;
+      margin-top:10px;
+    }
+  }
+
+  .livraison {
+    .bloc{
+      font-size: 18px;
+      padding: 5px 0;
+      margin-top:20px;
+
+
+      &:before{
+        content: "";
+        width: 39px;
+        height: 54px;
+        position: absolute;
+        top:-8px;
+        left: -48px;
+        background: url('../images/livrason.png') no-repeat center center / cover;
+      }
+    }
+    .villes{
+      margin-top:15px;
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+      height:70px;
+      p{
+        font-size: 14px;
+        color: $red;
+        font-family: 'Bree Serif', serif;
+        display:block;
+        margin:0;
+        line-height:16px;
+        small{
+          font-size: 11px;
+          font-style:italic;
+          display: block;
+          margin-top:-2px;
+        }
+      }
+    }
+  }
+
+  .content{
+    margin-top:20px;
+    float:right;
+    .gmaps{
+      width:470px;
+      height:350px;
+      border:6px solid $red;
+      -moz-box-shadow: 0px 0px 5px 0px #000000;
+      -webkit-box-shadow: 0px 0px 5px 0px #000000;
+      -o-box-shadow: 0px 0px 5px 0px #000000;
+      box-shadow: 0px 0px 5px 0px #000000;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);
+    }
+  }
+
+}
+
+.menu-screen{
+  margin: 0 5px 25px 5px;
+  padding: 45px 45px 15px 45px ;
+  background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+  height: 460px;
+  position: relative;
+  &:before{
+    content: "";
+    background:transparent url('../images/carte_frame.png') center center no-repeat / cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(15px 0px 20px rgba(24, 20, 16, 0.75))
+  }
+  div.content{
+    text-align:center;
+  }
+
+  h2{
+    font-family: 'Ballpark-Weiner';
+    font-size: 38px;
+    color: #ffd475;
+    text-align:center;
+    font-weight: 400;
+    border-bottom: 1px solid $yellow;
+    margin:0 15px;
+    margin-top:-10px;
+    text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+  }
+  div.menu{
+    width: 260px;
+    height: 160px;
+    margin: 10px 15px 5px;
+    background: $red;
+    border-radius: 5px;
+    display: inline-table;
+
+    .tile{
+      h4{
+        text-transform: uppercase;
+        color: $yellow;
+        font-family: 'Bree Serif', serif;
+        font-weight:200;
+        margin: 0;
+        font-size: 20px;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+      }
+      text-align: left;
+      position:relative;
+      border-bottom: 1px solid $yellow;
+      margin:6px auto 12px auto;
+      padding-bottom:2px;
+      width:200px;
+      span{
+        position:absolute;
+        top:0;
+        right:0;
+        background: $green;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        color: white;
+        padding: 2px 15px 0px 10px;
+        line-height: 24px;
+        border-radius:4px;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        &:after{
+          content: "\20AC";
+          font-size:12px;
+          position:absolute;
+          top:0;
+          right:6px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+        }
+      }
+    }
+    ul{
+      list-style:none;
+      padding:0 20px;
+      margin:0;
+      color: $yellow;
+      li{
+        margin-bottom:16px;
+        font-size:14px;
+        position:relative;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        &:after{
+          content: "+";
+          position:absolute;
+          left:50%;
+          bottom:-16px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        }
+        &:last-child{
+          margin-bottom:0;
+          &:after{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.carte-screen{
+  margin: 0 5px 25px 5px;
+  padding: 30px 45px 15px 12px ;
+  background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+  height: 460px;
+  position: relative;
+  &:before{
+    content: "";
+    background:transparent url('../images/carte_frame.png') center center no-repeat / cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(15px 0px 20px rgba(24, 20, 16, 0.75));
+    z-index:10;
+    pointer-events:none;
+  }
+
+  .leftbar{
+    overflow:hidden;
+    .mini{
+      position:relative;
+      width:125px;
+      height:67px;
+      transform: translateX(-25px);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      outline: none;
+      cursor:pointer;
+      &:hover{
+        transform: translateX(0);
+      }
+      img {
+        position:absolute;
+        left:0;
+        width:100%;
+        height:auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &.top:hover {
+          opacity:0;
+        }
+      }
+    }
+  }
+  .content{
+    position: absolute;
+    top: 35px;
+    left: 180px;
+    .liste{
+      height: 425px;
+      padding-right:35px;
+      padding-bottom:40px;
+      overflow:auto;
+      &>div{
+        width:500px;
+        height:65px;
+        background:$alt-yellow;
+        padding: 0 5px;
+        margin-bottom:5px;
+        position:relative;
+        .desc{
+          width:350px;
+          h4{
+            margin:0;
+            border-bottom: 1px solid $red;
+            color: $red;
+            font-family: 'Bree Serif', serif;
+            font-weight:200;
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom:4px;
+          }
+          p{
+            color: $red;
+            font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+            font-weight:100;
+            font-size: 12px;
+            line-height: 14px;
+            margin:0;
+          }
+        }
+        .price{
+          position: absolute;
+          right:70px;
+          width:70px;
+          height:65px;
+          top:0;
+          div.btn{
+            text-align:center;
+            background:#B3AA92;
+            color: $alt-yellow;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3.5px;
+            height:17px;
+            &.active, &:hover{
+              background:#137D00;
+            }
+          }
+          div.null{
+            text-align:center;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAABlBMVEW0q5PDuqI5JaSOAAAAGElEQVR4AWNgZGRkAAMozQiESFyIPGEaAAOoABksRSbvAAAAAElFTkSuQmCC);
+            color: $alt-yellow;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3.5px;
+            height:17px;
+          }
+        }
+        .addtocart-btn{
+          position: absolute;
+          right:2px;
+          width:62px;
+          height:59px;
+          top:0;
+          background: url("../images/addbg.jpg") center center no-repeat / cover;
+          font-family: 'MankSans';
+          font-weight:700;
+          border-radius:5px;
+          font-size:12px;
+          line-height:18px;
+          margin:3px;
+          a, div{
+            width:100%;
+            height:100%;
+            display:block;
+          }
+
+          span{
+            color: white;
+            font-size: 18px;
+            display: block;
+            padding: 3px 6px;
+            padding-right:16px;
+            text-align: right;
+            position: relative;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+            &:after{
+              content: "\20AC";
+              font-size:12px;
+              position:absolute;
+              top:3px;
+              right:6px;
+              text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ngcart-cart{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    background: white;
+    bottom: 30px;
+    width: 200px;
+  }
+}

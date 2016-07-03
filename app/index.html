@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="ileauxpizzasApp">
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+    <div class="header">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">Accueil</a></li>
+              <li><a ng-href="carte">La carte</a></li>
+              <li class="spacer">&nbsp;</li>
+              <li><a ng-href="menu">Nos menus</a></li>
+              <li><a ng-href="contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div>
+          <p>L'île Aux Pizzas - 159 Bd Jean Jaurès 37300 Joué-lès-tours - Tèl. 02 47 67 15 15</p>
+          <p>&copy; 2016 L'île Aus Pizzas | Tous Droits Réservés</p>
+        </div>
+
+        <div>
+          <p>Pour votre santé, évitez de grignoter entre les repas | www.mangerbouger.fr</p>
+          <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC4GS73mQTev46qRkK7dnSWm4Q6Bbit2l0&v=3.exp'></script>
+    <script type='text/javascript'>
+        function init_map() {
+            var myOptions = {
+                zoom: 12,
+                center: new google.maps.LatLng(47.3478427,0.6561853),
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true,
+                zoomControl: true,
+                zoomControlOptions: {
+                    position: google.maps.ControlPosition.TOP_RIGHT
+                }
+            };
+
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(47.3478427,0.6561853),
+                icon: {
+                  url: "images/marker.png",
+                  scaledSize: new google.maps.Size(48, 48),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(24, 48)
+                }
+            });
+
+            markerSuperU = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(47.3448610, 0.6355841),
+                icon: {
+                  url: "images/marker_super_u.png",
+                  scaledSize: new google.maps.Size(48, 48),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(24, 48)
+                }
+            });
+
+            markerOceades = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(47.433124, 0.66257),
+                icon: {
+                  url: "images/marker_oceades.png",
+                  scaledSize: new google.maps.Size(48, 48),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(24, 48)
+                }
+            });
+
+            markerLeclerc = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng(47.3561568, 0.6969343),
+                icon: {
+                  url: "images/marker_leclerc.png",
+                  scaledSize: new google.maps.Size(48, 48),
+                  origin: new google.maps.Point(0, 0),
+                  anchor: new google.maps.Point(24, 48)
+                }
+            });
+        }
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-i18n/angular-locale_fr-fr.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-messages/angular-messages.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/ngCart/dist/ngCart.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/contact.js"></script>
+        <script src="scripts/controllers/menu.js"></script>
+        <script src="scripts/controllers/carte.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+<div class="menu-screen">
+  <div class="content">
+
+      <h2>Nos menus</h2>
+
+
+      <div ng-repeat="menu in menus" class="menu">
+        <div class="tile">
+          <h4 ng-bind-html="menu.name"></h4>
+          <span ng-bind-html="menu.price"></span>
+        </div>
+        <div class="contenu">
+            <ul>
+                <li ng-repeat="inside in menu.inside" ng-bind-html="inside"></li>
+            </ul>
+        </div>
+      </div>
+  </div>
+</div>

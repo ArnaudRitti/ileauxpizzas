@@ -1,0 +1,27 @@
+<div class="carte-screen">
+  <div class="leftbar">
+    <div ng-repeat="(k, cat) in carte" ng-click="list(k)" class="animate-repeat mini">
+      <img class="bottom" ng-src="./images/menu_btn/{{cat.id}}_over.png" alt="{{cat.cat}} {{cat.desc}}">
+      <img class="top" ng-src="./images/menu_btn/{{cat.id}}_out.png" alt="{{cat.cat}} {{cat.desc}}">
+    </div>
+  </div>
+  <div class="content">
+    <div class="liste">
+      <div ng-repeat="(k, plat) in liste" class="animate-repeat">
+        <div class="desc">
+          <h4 ng-bind-html="plat.name"></h4>
+          <p ng-bind-html="plat.desc"></p>
+        </div>
+        <div class="price" ng-init="models[k].price = plat.prices[0]; models[k].name = plat.name; models[k].active = 0 ">
+          <div ng-repeat="p in plat.prices" >
+            <div ng-if="p.size != null " class="btn {{models[k].active == $index ? 'active' : '' }}" ng-click="models[k].price = p; models[k].name = plat.name; models[k].active = $index">{{p.size}}</div>
+            <div ng-if="p.size == null " class="null">&nbsp;</div>
+          </div>
+        </div>
+        <ngcart-addtocart class="addtocart-btn" id="{{getitemid(models[k])}}" name="{{ models[k].name}}" data="models[k]" price="{{ models[k].price.price }}">{{ models[k].price.price }}</ngcart-addtocart>
+      </div>
+    </div>
+  </div>
+  <ngcart-cart></ngcart-cart>
+
+</div>

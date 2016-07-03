@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Bree+Serif);
+@font-face {
+font-family: 'Toonish';
+font-style: normal;
+font-weight: normal;
+src: local('Toonish'), url('../fonts/TOONISH.woff') format('woff');
+}
+@font-face {
+font-family: 'Ballpark-Weiner';
+src:  url('../fonts/Ballpark-Weiner.ttf.woff') format('woff'),
+url('../fonts/Ballpark-Weiner.ttf.svg#Ballpark-Weiner') format('svg'),
+url('../fonts/Ballpark-Weiner.ttf.eot'),
+url('../fonts/Ballpark-Weiner.eot?#iefix') format('embedded-opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'MankSans-Medium';
+font-style: normal;
+font-weight: normal;
+src: local('MankSans-Medium'), url('../fonts/MankSans-Medium.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'MankSans';
+font-style: normal;
+font-weight: normal;
+src: local('MankSans'), url('../fonts/MankSans.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'MankSans-MediumOblique';
+font-style: normal;
+font-weight: normal;
+src: local('MankSans-MediumOblique'), url('../fonts/MankSans-MediumOblique.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'MankSans-Oblique';
+font-style: normal;
+font-weight: normal;
+src: local('MankSans-Oblique'), url('../fonts/MankSans-Oblique.woff') format('woff');
+}
+
+@font-face {
+font-family: 'BorisBlackBloxx';
+font-style: normal;
+font-weight: normal;
+src: local('BorisBlackBloxx'), url('../fonts/BorisBlackBloxx.woff') format('woff');
+}

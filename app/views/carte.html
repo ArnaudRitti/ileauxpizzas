@@ -1,13 +1,19 @@
 <div class="carte-screen">
   <div class="leftbar">
-    <div ng-repeat="(k, cat) in carte" ng-click="list(k)" class="animate-repeat mini">
+    <div ng-repeat="(k, cat) in carte" ng-click="list(k)" class="animate-right mini" ng-class="{ 'active' : k==selected}">
       <img class="bottom" ng-src="./images/menu_btn/{{cat.id}}_over.png" alt="{{cat.cat}} {{cat.desc}}">
       <img class="top" ng-src="./images/menu_btn/{{cat.id}}_out.png" alt="{{cat.cat}} {{cat.desc}}">
     </div>
   </div>
   <div class="content">
-    <div class="liste">
-      <div ng-repeat="(k, plat) in liste" class="animate-repeat">
+    <div class="title">
+      <h1>La Carte</h1>
+      <p>LIVRAISON GRATUITE<br/><span>à partir de 8€ de commande</span></p>
+
+      <span ng-if="liste" class="help"  ng-click="showhelp()"><span>Tailles des pizzas</span><img src="images/infos.png"> </span>
+    </div>
+    <div class="liste animate-up" ng-if="liste" >
+      <div ng-repeat="(k, plat) in liste"  class="animate-up">
         <div class="desc">
           <h4 ng-bind-html="plat.name"></h4>
           <p ng-bind-html="plat.desc"></p>
@@ -20,6 +26,9 @@
         </div>
         <ngcart-addtocart class="addtocart-btn" id="{{getitemid(models[k])}}" name="{{ models[k].name}}" data="models[k]" price="{{ models[k].price.price }}">{{ models[k].price.price }}</ngcart-addtocart>
       </div>
+    </div>
+    <div ng-if="!liste"  class="animate-up">
+      <img src="images/carte_intro.png">
     </div>
   </div>
   <ngcart-cart></ngcart-cart>

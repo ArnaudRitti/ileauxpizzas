@@ -1,0 +1,289 @@
+.menu-screen{
+  margin: 0 5px 25px 5px;
+  padding: 45px 45px 15px 45px ;
+  background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+  height: 460px;
+  position: relative;
+  overflow:hidden;
+  &:before{
+    content: "";
+    background:transparent url('../images/carte_frame.png') center center no-repeat / cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(15px 0px 20px rgba(24, 20, 16, 0.75))
+  }
+  div.content{
+    text-align:center;
+  }
+
+  h2{
+    font-family: 'Ballpark-Weiner';
+    font-size: 38px;
+    color: #ffd475;
+    text-align:center;
+    font-weight: 400;
+    border-bottom: 1px solid $yellow;
+    margin:0 15px;
+    margin-top:-10px;
+    text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+  }
+  div.menu{
+    width: 260px;
+    height: 160px;
+    margin: 10px 15px 5px;
+    background: $red;
+    border-radius: 5px;
+    display: inline-table;
+
+    .tile{
+      h4{
+        text-transform: uppercase;
+        color: $yellow;
+        font-family: 'Bree Serif', serif;
+        font-weight:200;
+        margin: 0;
+        font-size: 20px;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+      }
+      text-align: left;
+      position:relative;
+      border-bottom: 1px solid $yellow;
+      margin:6px auto 12px auto;
+      padding-bottom:2px;
+      width:200px;
+      span{
+        position:absolute;
+        top:0;
+        right:0;
+        background: $green;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        color: white;
+        padding: 2px 15px 0px 10px;
+        line-height: 24px;
+        border-radius:4px;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        &:after{
+          content: "\20AC";
+          font-size:12px;
+          position:absolute;
+          top:0;
+          right:6px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+        }
+      }
+    }
+    ul{
+      list-style:none;
+      padding:0 20px;
+      margin:0;
+      color: $yellow;
+      li{
+        margin-bottom:16px;
+        font-size:14px;
+        position:relative;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        &:after{
+          content: "+";
+          position:absolute;
+          left:50%;
+          bottom:-16px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        }
+        &:last-child{
+          margin-bottom:0;
+          &:after{
+            content: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .menu-screen{
+    margin: 0 5px 25px 5px;
+    padding: 45px 45px 15px 45px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    &:before{
+      content: none;
+    }
+    div.menu{
+      width: 260px;
+      height: 160px;
+      margin: 10px 15px 5px;
+      background: $red;
+      border-radius: 5px;
+      display: inline-table;
+
+      .tile{
+        h4{
+          text-transform: uppercase;
+          color: $yellow;
+          font-family: 'Bree Serif', serif;
+          font-weight:200;
+          margin: 0;
+          font-size: 20px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        }
+        text-align: left;
+        position:relative;
+        border-bottom: 1px solid $yellow;
+        margin:6px auto 12px auto;
+        padding-bottom:2px;
+        width:200px;
+        span{
+          position:absolute;
+          top:0;
+          right:0;
+          background: $green;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          color: white;
+          padding: 2px 15px 0px 10px;
+          line-height: 24px;
+          border-radius:4px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          &:after{
+            content: "\20AC";
+            font-size:12px;
+            position:absolute;
+            top:0;
+            right:6px;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+          }
+        }
+      }
+      ul{
+        list-style:none;
+        padding:0 20px;
+        margin:0;
+        color: $yellow;
+        li{
+          margin-bottom:16px;
+          font-size:14px;
+          position:relative;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          &:after{
+            content: "+";
+            position:absolute;
+            left:50%;
+            bottom:-16px;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          }
+          &:last-child{
+            margin-bottom:0;
+            &:after{
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .menu-screen{
+    margin: 0 5px 25px 5px;
+    padding: 45px 15px 15px 15px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    &:before{
+      content: none;
+    }
+    div.menu{
+      width: 240px;
+      height: 175px;
+      margin: 10px 15px 5px;
+      background: $red;
+      border-radius: 5px;
+      display: block;
+      margin-left:auto;
+      margin-right:auto;
+
+      .tile{
+        h4{
+          text-transform: uppercase;
+          color: $yellow;
+          font-family: 'Bree Serif', serif;
+          font-weight:200;
+          margin: 0;
+          font-size: 20px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        }
+        text-align: left;
+        position:relative;
+        border-bottom: 1px solid $yellow;
+        margin:6px auto 12px auto;
+        padding-bottom:2px;
+        width:200px;
+        span{
+          position:absolute;
+          top:0;
+          right:0;
+          background: $green;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          color: white;
+          padding: 2px 15px 0px 10px;
+          line-height: 24px;
+          border-radius:4px;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          &:after{
+            content: "\20AC";
+            font-size:12px;
+            position:absolute;
+            top:0;
+            right:6px;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+          }
+        }
+      }
+      ul{
+        list-style:none;
+        padding:0 20px;
+        margin:0;
+        color: $yellow;
+        li{
+          margin-bottom:16px;
+          font-size:14px;
+          position:relative;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          &:after{
+            content: "+";
+            position:absolute;
+            left:50%;
+            bottom:-16px;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+          }
+          &:last-child{
+            margin-bottom:0;
+            &:after{
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

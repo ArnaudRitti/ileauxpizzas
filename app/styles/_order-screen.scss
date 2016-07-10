@@ -1,0 +1,896 @@
+.order-screen{
+  margin: 0 5px 25px 5px;
+  padding: 30px 45px 15px 12px ;
+  background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+  height: 460px;
+  position: relative;
+  &:before{
+    content: "";
+    background:transparent url('../images/carte_frame.png') center center no-repeat / cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(15px 0px 20px rgba(24, 20, 16, 0.75));
+    z-index:10;
+    pointer-events:none;
+  }
+
+
+  .content{
+    position: absolute;
+    top: 35px;
+    left: 50px;
+    width: 650px;
+    .title{
+      padding: 0 10px;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      position: relative;
+      h1{
+        display:inline-block;
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 36px;
+        margin:0;
+        color: $yellow;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+        border-bottom: 1px solid $yellow;
+
+      }
+
+      p{
+        display:inline-block;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        margin:0;
+        color: $yellow;
+        line-height: 15px;
+        margin-left: 10px;
+        padding: 4px 0;
+        border-left: 1px solid $yellow;
+        padding-left: 10px;
+        span{
+          font-size:80%;
+        }
+      }
+
+      .backmenu{
+        position:absolute;
+        right:5px;
+        bottom:10px;
+        outline:none;
+        img{
+          width:25px;
+          height:25px;
+          vertical-align: middle;
+        }
+        span{
+          color:white;
+          padding-left:5px;
+          font-family: Arial, Helvetica, sans-serif;
+
+        }
+      }
+    }
+  }
+
+  .form{
+    height: 320px;
+    position:relative;
+    margin-top: 15px;
+    div.radio{
+      text-transform: uppercase;
+      text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      color: white;
+      margin-bottom:2px;
+      padding:0 15px;
+      label{
+        margin-right: 15px;
+      }
+    }
+
+    fieldset{
+      border:0;
+      padding:0;
+      margin:0;
+    }
+
+    .form-group{
+      margin:4px 0;
+    }
+    .col15{
+      width: 15%;
+      padding:0 15px;
+      float:left;
+    }
+    .col20{
+      width: 20%;
+      padding:0 15px;
+      float:left;
+    }
+    .col25{
+      width: 25%;
+      padding:0 15px;
+      float:left;
+    }
+    .col30{
+      width: 30%;
+      padding:0 15px;
+      float:left;
+    }
+    .col35{
+      width: 35%;
+      padding:0 15px;
+      float:left;
+    }
+    .col50{
+      width: 50%;
+      padding:0 15px;
+      float:left;
+    }
+    .col100{
+      width: 100%;
+      padding:0 15px;
+      float:left;
+    }
+
+    hr{
+      border: 0;
+      border-bottom: 1px solid $yellow;
+      margin: 8px 10px;
+    }
+    p{
+      text-align:right;
+      margin:0;
+      padding:2px 15px;
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: $yellow;
+      margin-bottom: -10px;
+    }
+    .form-group{
+      label{
+        display:block;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: $yellow;
+        margin-bottom:2px;
+      }
+      input,select{
+        width:100%;
+        border:0;
+        padding:4px 6px;
+        border:2px solid #fff;
+        &.ng-invalid:not(.ng-pristine){
+         border:2px solid #561505;
+        }
+      }
+      textarea{
+        width: 100%;
+        resize: none;
+        height: 170px;
+        border:0;
+        padding:4px 6px;
+        border:2px solid #fff;
+        &.ng-invalid:not(.ng-pristine){
+         border:2px solid #561505;
+        }
+      }
+      span{
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: white;
+        display:inline-block;
+        margin-left: 20px;
+      }
+    }
+    fieldset.alt{
+      .form-group{
+        margin-bottom:15px;
+        label{
+          display:block;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 12px;
+          color: $yellow;
+          margin-bottom:5px;
+        }
+        input,select{
+          width:30%;
+          border:0;
+          padding:4px 6px;
+        }
+        textarea{
+          width: 100%;
+          resize: none;
+          height: 170px;
+          border:0;
+          padding:4px 6px;
+        }
+        span{
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 12px;
+          color: white;
+          display:inline-block;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+  button{
+    float: right;
+    background:none;
+    border: none;
+    outline: none;
+    padding:0;
+    margin:0;
+    margin-right: 15px;
+    cursor:pointer;
+    img{
+      width: 120px;
+    }
+  }
+  .pager{
+    list-style:none;
+    margin:0;
+    padding:0;
+    position:absolute;
+    bottom:0;
+    li{
+      opacity:1;
+      &.has-error{
+        opacity:0.5;
+        pointer-events:none;
+        cursor: default;
+      }
+      img{
+        width: 30px;
+        height:30px;
+        vertical-align: bottom;
+        margin-right:10px;
+      }
+      a{
+        text-decoration:none;
+        color:white;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-size:18px;
+
+      }
+    }
+  }
+
+  ngcart-cart{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    background: white;
+    bottom: 30px;
+    width: 200px;
+    .head{
+      font-family: 'Ballpark-Weiner';
+      font-weight: 400;
+      font-size: 22px;
+      color: #D33D3D;
+      margin: 10px 20px;
+      text-align: center;
+      border-bottom: 2px solid #CECECE;
+      padding-bottom: 5px;
+    }
+
+    .table-responsive{
+      height: 250px;
+      display: block !important;
+      overflow: auto;
+      .table{
+        width:100%;
+        color:$red;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        padding-right: 0;
+
+        .row{
+          outline:none;
+          position:relative;
+          margin-bottom:2px;
+          padding-top:2px;
+          height:25px;
+          &:after{
+            content: "SUPPRIMER L'ARTICLE ?";
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            opacity:0;
+            background: rgba($red, 0.7);
+            font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding: 8px 0;
+            color:white;
+          }
+          &:hover{
+            cursor:pointer;
+            &:after{
+              opacity:1;
+            }
+          }
+          text-align:right;
+          div{
+            float:left;
+            display:inline-block;
+            width:12%;
+            &:first-child{
+              padding-right:3px;
+            }
+          }
+        }
+        .row div.name{
+          text-align:left;
+          width:63%;
+          line-height: 12px;
+        }
+        .row div.price{
+          width:25%;
+          padding-right: 5px;
+        }
+        .name, .price{
+          font-size:14px;
+          line-height:14px;
+          span{
+            font-size:80%;
+          }
+        }
+      }
+    }
+
+    .total{
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+      color: $red;
+      margin: 10px 20px;
+      text-align: right;
+      border-bottom: 2px solid #CECECE;
+      border-top: 2px solid #CECECE;
+      padding-bottom: 0;
+      padding-top: 5px;
+      font-size:22px;
+      span{
+        font-size:14px;
+        color: #838383;
+        float: left;
+        text-transform:uppercase;
+      }
+    }
+
+    a{
+      background:none;
+      border: none;
+      outline: none;
+      margin:0 auto;
+      display:block;
+      text-align:center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .order-screen{
+    margin: 0 5px 25px 5px;
+    padding: 30px 15px 15px 15px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    width:auto;
+    &:before{
+      content: none;
+
+    }
+
+
+    .content{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      margin:auto;
+      .title{
+        padding: 0 10px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        h1{
+          display:inline-block;
+          font-family: 'Ballpark-Weiner';
+          font-weight: 400;
+          font-size: 36px;
+          margin:0;
+          color: $yellow;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+          border-bottom: 1px solid $yellow;
+
+        }
+
+        p{
+          display:inline-block;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          margin:0;
+          color: $yellow;
+          line-height: 15px;
+          margin-left: 10px;
+          padding: 4px 0;
+          border-left: 1px solid $yellow;
+          padding-left: 10px;
+          span{
+            font-size:80%;
+          }
+        }
+
+        .backmenu{
+          position:absolute;
+          right:5px;
+          bottom:10px;
+          outline:none;
+          img{
+            width:25px;
+            height:25px;
+            vertical-align: middle;
+          }
+          span{
+            color:white;
+            padding-left:5px;
+            font-family: Arial, Helvetica, sans-serif;
+            display:none;
+          }
+        }
+      }
+    }
+
+    .form{
+      height: auto;
+      position:relative;
+      margin-top: 15px;
+      padding-bottom: 40px;
+      margin-bottom: 20px;
+
+      .col15{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col20{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col25{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col30{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col35{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col50{
+        width: 50%;
+        padding:0 15px;
+        float:left;
+      }
+      .col100{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+
+
+
+    }
+
+    ngcart-cart{
+      position: relative;
+      top: 0;
+      right: 0;
+      background: white;
+      bottom: 0;
+      width: 200px;
+      display:block;
+      margin:0 auto;
+      padding-top: 1px;
+
+      .head{
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 22px;
+        color: #D33D3D;
+        margin: 10px 20px;
+        text-align: center;
+        border-bottom: 2px solid #CECECE;
+        padding-bottom: 5px;
+      }
+
+      .table-responsive{
+        min-height: 250px;
+        height: auto;
+        display: block !important;
+        overflow: auto;
+        .table{
+          width:100%;
+          color:$red;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+
+
+          .row{
+            outline:none;
+            position:relative;
+            margin-bottom:2px;
+            padding-top:2px;
+            height:25px;
+            &:after{
+              content: "SUPPRIMER L'ARTICLE ?";
+              position:absolute;
+              top:0;
+              left:0;
+              height:100%;
+              width:100%;
+              opacity:0;
+              background: rgba($red, 0.7);
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              letter-spacing: 0.1em;
+              text-align: center;
+              padding: 8px 0;
+              color:white;
+            }
+            &:hover{
+              cursor:pointer;
+              &:after{
+                opacity:1;
+              }
+            }
+            text-align:right;
+            div{
+              float:left;
+              display:inline-block;
+              width:12%;
+              &:first-child{
+                padding-right:3px;
+              }
+            }
+          }
+          .row div.name{
+            text-align:left;
+            width:63%;
+            line-height: 12px;
+          }
+          .row div.price{
+            width:25%;
+            padding-right: 5px;
+          }
+          .name, .price{
+            font-size:14px;
+            line-height:14px;
+            span{
+              font-size:80%;
+            }
+          }
+        }
+      }
+
+      .total{
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: $red;
+        margin: 10px 20px;
+        text-align: right;
+        border-bottom: 2px solid #CECECE;
+        border-top: 2px solid #CECECE;
+        padding-bottom: 0;
+        padding-top: 5px;
+        font-size:22px;
+        span{
+          font-size:14px;
+          color: #838383;
+          float: left;
+          text-transform:uppercase;
+        }
+      }
+
+      a{
+        background:none;
+        border: none;
+        outline: none;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+      }
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .order-screen{
+    margin: 0 5px 25px 5px;
+    padding: 30px 15px 15px 15px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    width:auto;
+    &:before{
+      content: none;
+
+    }
+
+
+    .content{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: auto;
+      margin:auto;
+      .title{
+        padding: 0 10px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+        position: relative;
+        h1{
+          display:inline-block;
+          font-family: 'Ballpark-Weiner';
+          font-weight: 400;
+          font-size: 36px;
+          margin:0;
+          color: $yellow;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+          border-bottom: 1px solid $yellow;
+
+        }
+
+        p{
+          display:inline-block;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          margin:0;
+          color: $yellow;
+          line-height: 15px;
+          margin-left: 10px;
+          padding: 4px 0;
+          border-left: 1px solid $yellow;
+          padding-left: 10px;
+          span{
+            font-size:80%;
+          }
+        }
+
+        .backmenu{
+          position:absolute;
+          right:5px;
+          bottom:10px;
+          outline:none;
+          img{
+            width:25px;
+            height:25px;
+            vertical-align: middle;
+          }
+          span{
+            color:white;
+            padding-left:5px;
+            font-family: Arial, Helvetica, sans-serif;
+            display:none;
+          }
+        }
+      }
+    }
+
+    .form{
+      height: auto;
+      position:relative;
+      margin-top: 15px;
+      padding-bottom: 40px;
+      margin-bottom: 20px;
+      div.radio{
+        text-transform: uppercase;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        color: white;
+        margin-bottom:2px;
+        padding:0 15px;
+
+        label{
+          margin-right: 15px;
+          width: 100%;
+          display: block;
+          margin: 5px 0;
+        }
+      }
+      .col15{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col20{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col25{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col30{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col35{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col50{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+      .col100{
+        width: 100%;
+        padding:0 15px;
+        float:left;
+      }
+
+
+
+    }
+
+    ngcart-cart{
+      position: relative;
+      top: 0;
+      right: 0;
+      background: white;
+      bottom: 0;
+      width: 200px;
+      display:block;
+      margin:0 auto;
+      padding-top: 1px;
+
+      .head{
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 22px;
+        color: #D33D3D;
+        margin: 10px 20px;
+        text-align: center;
+        border-bottom: 2px solid #CECECE;
+        padding-bottom: 5px;
+      }
+
+      .table-responsive{
+        min-height: 250px;
+        height: auto;
+        display: block !important;
+        overflow: auto;
+        .table{
+          width:100%;
+          color:$red;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+
+
+          .row{
+            outline:none;
+            position:relative;
+            margin-bottom:2px;
+            padding-top:2px;
+            height:25px;
+            &:after{
+              content: "SUPPRIMER L'ARTICLE ?";
+              position:absolute;
+              top:0;
+              left:0;
+              height:100%;
+              width:100%;
+              opacity:0;
+              background: rgba($red, 0.7);
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              letter-spacing: 0.1em;
+              text-align: center;
+              padding: 8px 0;
+              color:white;
+            }
+            &:hover{
+              cursor:pointer;
+              &:after{
+                opacity:1;
+              }
+            }
+            text-align:right;
+            div{
+              float:left;
+              display:inline-block;
+              width:12%;
+              &:first-child{
+                padding-right:3px;
+              }
+            }
+          }
+          .row div.name{
+            text-align:left;
+            width:63%;
+            line-height: 12px;
+          }
+          .row div.price{
+            width:25%;
+            padding-right: 5px;
+          }
+          .name, .price{
+            font-size:14px;
+            line-height:14px;
+            span{
+              font-size:80%;
+            }
+          }
+        }
+      }
+
+      .total{
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: $red;
+        margin: 10px 20px;
+        text-align: right;
+        border-bottom: 2px solid #CECECE;
+        border-top: 2px solid #CECECE;
+        padding-bottom: 0;
+        padding-top: 5px;
+        font-size:22px;
+        span{
+          font-size:14px;
+          color: #838383;
+          float: left;
+          text-transform:uppercase;
+        }
+      }
+
+      a{
+        background:none;
+        border: none;
+        outline: none;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,218 @@
+.contact-screen{
+  margin: 0 5px 25px 5px;
+  padding: 45px 45px 15px 45px ;
+  @include background(linear-gradient(rgb(248, 212, 114), rgb(251, 238, 185)) left repeat);
+
+  .leftbar{
+    width:350px;
+    float:left;
+  }
+  .infos{
+    margin-top: -20px;
+    margin-left: -20px;
+  }
+  .phone,.adresse, .horaires .bloc, .livraison .bloc{
+
+    border-radius: 5px;
+    background: $red;
+    color: white;
+    font-family: 'BorisBlackBloxx';
+    font-size: 24px;
+    box-shadow: 3px 4px 5px 0px rgba(62, 51, 41, 0.75);
+    width: 200px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left:50px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 25px;
+      height: 48px;
+      position: absolute;
+      top:-6px;
+      left: -40px;
+      background: url('../images/phone.png') no-repeat center center / cover;
+    }
+  }
+
+  .adresse{
+    font-size: 12px;
+    padding: 2px 0;
+    span{
+      font-size: 16px;
+    }
+
+    &:before{
+      content: "";
+      width: 42px;
+      height: 33px;
+      position: absolute;
+      top:8px;
+      left: -50px;
+      background: url('../images/m.png') no-repeat center center / cover;
+    }
+  }
+
+  .horaires {
+    .bloc{
+      font-size: 14px;
+      padding: 2px 0;
+
+
+      &:before{
+        content: "";
+        width: 39px;
+        height: 38px;
+        position: absolute;
+        top:5px;
+        left: -45px;
+        background: url('../images/horraire.png') no-repeat center center / cover;
+      }
+    }
+    span{
+      font-size: 14px;
+      color: $red;
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      display:block;
+      margin-top:10px;
+    }
+  }
+
+  .livraison {
+    .bloc{
+      font-size: 18px;
+      padding: 5px 0;
+      margin-top:20px;
+
+
+      &:before{
+        content: "";
+        width: 39px;
+        height: 54px;
+        position: absolute;
+        top:-8px;
+        left: -48px;
+        background: url('../images/livrason.png') no-repeat center center / cover;
+      }
+    }
+    .villes{
+      margin-top:15px;
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+      height:70px;
+      p{
+        font-size: 14px;
+        color: $red;
+        font-family: 'Bree Serif', serif;
+        display:block;
+        margin:0;
+        line-height:16px;
+        small{
+          font-size: 11px;
+          font-style:italic;
+          display: block;
+          margin-top:-2px;
+        }
+      }
+    }
+  }
+
+  .content{
+    margin-top:20px;
+    float:right;
+    .gmaps{
+      width:470px;
+      height:350px;
+      border:6px solid $red;
+      -moz-box-shadow: 0px 0px 5px 0px #000000;
+      -webkit-box-shadow: 0px 0px 5px 0px #000000;
+      -o-box-shadow: 0px 0px 5px 0px #000000;
+      box-shadow: 0px 0px 5px 0px #000000;
+      filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);
+    }
+  }
+
+}
+
+
+@media screen and (max-width: 1024px) {
+  .contact-screen{
+    padding: 45px 25px 15px 25px;
+    .leftbar{
+      width:40%;
+      float:left;
+    }
+
+    .livraison .villes {
+      margin-top: 15px;
+      -moz-column-count: 1;
+      column-count: 1;
+      height: auto;
+      br{
+        display:none;
+      }
+    }
+
+
+    .content{
+      margin-top:20px;
+      width:60%;
+      float:left;
+      .gmaps{
+        width:100%;
+        height:350px;
+        border:6px solid $red;
+        -moz-box-shadow: 0px 0px 5px 0px #000000;
+        -webkit-box-shadow: 0px 0px 5px 0px #000000;
+        -o-box-shadow: 0px 0px 5px 0px #000000;
+        box-shadow: 0px 0px 5px 0px #000000;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contact-screen{
+    padding: 45px 25px 15px 25px;
+    .leftbar{
+      width:100%;
+      float:left;
+      text-align: center;
+      *{
+        margin-left: auto !important;
+        margin-right: auto;
+      }
+    }
+
+    .livraison .villes {
+      margin-top: 15px;
+      -moz-column-count: 1;
+      column-count: 1;
+      height: auto;
+      br{
+        display:none;
+      }
+    }
+
+
+    .content{
+      margin-top:20px;
+      width:100%;
+      float:left;
+      .gmaps{
+        width:100%;
+        height:350px;
+        border:6px solid $red;
+        -moz-box-shadow: 0px 0px 5px 0px #000000;
+        -webkit-box-shadow: 0px 0px 5px 0px #000000;
+        -o-box-shadow: 0px 0px 5px 0px #000000;
+        box-shadow: 0px 0px 5px 0px #000000;
+        filter:progid:DXImageTransform.Microsoft.Shadow(color=#000000, Direction=NaN, Strength=5);
+      }
+    }
+
+  }
+}

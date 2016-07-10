@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <base href="/">
-    <title></title>
-    <meta name="description" content="">
+    <title>Restaurant L'Ile Aux Pizzas - Veritables Pizzas Italiennes</title>
+    <meta name="description" content="Découvrez de veritables pizzas italiennes cuites au feu de bois.">
     <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweetalert.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweet-alert.css">
     <!-- endbuild -->
   </head>
   <body ng-app="ileauxpizzasApp">
-    <!--[if lte IE 8]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
 
     <!-- Add your site or application content here -->
     <div class="header">
@@ -68,6 +69,8 @@
     </script>
 
     <script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyC4GS73mQTev46qRkK7dnSWm4Q6Bbit2l0&v=3.exp'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type='text/javascript'>
         function init_map() {
             var myOptions = {
@@ -131,7 +134,6 @@
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-i18n/angular-locale_fr-fr.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-aria/angular-aria.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
@@ -141,15 +143,22 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/ngCart/dist/ngCart.js"></script>
+    <script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="bower_components/ngSweetAlert/SweetAlert.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/contact.js"></script>
-        <script src="scripts/controllers/menu.js"></script>
-        <script src="scripts/controllers/carte.js"></script>
-        <!-- endbuild -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.5.7/angular-locale_fr-fr.min.js"></script>
+
+    <!--     <script src="bower_components/angular-i18n/angular-locale_fr.js"></script>  -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/contact.js"></script>
+    <script src="scripts/controllers/menu.js"></script>
+    <script src="scripts/controllers/carte.js"></script>
+    <script src="scripts/controllers/commander.js"></script>
+    <!-- endbuild -->
 </body>
 </html>

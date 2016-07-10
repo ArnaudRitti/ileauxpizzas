@@ -1,0 +1,995 @@
+.carte-screen{
+  margin: 0 5px 25px 5px;
+  padding: 30px 45px 15px 12px ;
+  background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+  height: 460px;
+  position: relative;
+  overflow:hidden;
+  &:before{
+    content: "";
+    background:transparent url('../images/carte_frame.png') center center no-repeat / cover;
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    filter: drop-shadow(15px 0px 20px rgba(24, 20, 16, 0.75));
+    z-index:10;
+    pointer-events:none;
+  }
+
+  .leftbar{
+    overflow:hidden;
+    .mini{
+      position:relative;
+      width:125px;
+      height:67px;
+      transform: translateX(-25px);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      outline: none;
+      cursor:pointer;
+      &:hover, &.active{
+        transform: translateX(0);
+      }
+      img {
+        position:absolute;
+        left:0;
+        width:100%;
+        height:auto;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+
+        &.top:hover {
+          opacity:0;
+        }
+      }
+      &.active{
+        img.top {
+          opacity:0;
+        }
+      }
+    }
+  }
+  .content{
+    position: absolute;
+    top: 35px;
+    left: 180px;
+    width: 535px;
+    .title{
+      border-bottom: 1px solid $yellow;
+      padding: 0 10px;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      width: 500px;
+      position: relative;
+
+      h1{
+        display:inline-block;
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 36px;
+        margin:0;
+        color: $yellow;
+        text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+      }
+
+      p{
+        display:inline-block;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        margin:0;
+        color: $yellow;
+        line-height: 15px;
+        margin-left: 10px;
+        padding: 4px 0;
+        border-left: 1px solid $yellow;
+        padding-left: 10px;
+        span{
+          font-size:80%;
+        }
+      }
+
+      .help{
+        position:absolute;
+        right:5px;
+        bottom:10px;
+        outline:none;
+        img{
+          width:25px;
+          height:25px;
+          vertical-align: middle;
+        }
+        span{
+          opacity:0;
+          color:white;
+          padding-right:10px;
+        }
+        &:hover{
+          span{
+            opacity:1;
+          }
+        }
+      }
+
+
+    }
+    .liste{
+      height: 345px;
+      padding-right:35px;
+      padding-bottom:40px;
+      overflow:auto;
+      &>div{
+        width:500px;
+        height:65px;
+        background:$alt-yellow;
+        padding: 0 5px;
+        margin-top:5px;
+        position:relative;
+        .desc{
+          width:350px;
+          h4{
+            margin:0;
+            border-bottom: 1px solid $red;
+            color: $red;
+            font-family: 'Bree Serif', serif;
+            font-weight:200;
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom:4px;
+          }
+          p{
+            color: $red;
+            font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+            font-weight:100;
+            font-size: 12px;
+            line-height: 14px;
+            margin:0;
+          }
+        }
+        .price{
+          position: absolute;
+          right:70px;
+          width:70px;
+          height:65px;
+          top:0;
+          div.btn{
+            text-align:center;
+            background:#B3AA92;
+            color: $alt-yellow;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3.5px;
+            height:17px;
+            &.active, &:hover{
+              background:#137D00;
+            }
+          }
+          div.null{
+            text-align:center;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAABlBMVEW0q5PDuqI5JaSOAAAAGElEQVR4AWNgZGRkAAMozQiESFyIPGEaAAOoABksRSbvAAAAAElFTkSuQmCC);
+            color: $alt-yellow;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3.5px;
+            height:17px;
+          }
+        }
+        .addtocart-btn{
+          position: absolute;
+          right:2px;
+          width:62px;
+          height:59px;
+          top:0;
+          background: url("../images/addbg.jpg") center center no-repeat / cover;
+          font-family: 'MankSans';
+          font-weight:700;
+          border-radius:5px;
+          font-size:12px;
+          line-height:18px;
+          margin:3px;
+          a, div{
+            width:100%;
+            height:100%;
+            display:block;
+          }
+
+          span{
+            color: white;
+            font-size: 18px;
+            display: block;
+            padding: 3px 6px;
+            padding-right:16px;
+            text-align: right;
+            position: relative;
+            text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+            &:after{
+              content: "\20AC";
+              font-size:12px;
+              position:absolute;
+              top:3px;
+              right:6px;
+              text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ngcart-cart{
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    background: white;
+    bottom: 30px;
+    width: 200px;
+    .head{
+      font-family: 'Ballpark-Weiner';
+      font-weight: 400;
+      font-size: 22px;
+      color: #D33D3D;
+      margin: 10px 20px;
+      text-align: center;
+      border-bottom: 2px solid #CECECE;
+      padding-bottom: 5px;
+    }
+
+    .table-responsive{
+      height: 250px;
+      display: block !important;
+      overflow: auto;
+      .table{
+        width:100%;
+        color:$red;
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+
+
+        .row{
+          outline:none;
+          position:relative;
+          margin-bottom:2px;
+          padding-top:2px;
+          height:25px;
+          &:after{
+            content: "SUPPRIMER L'ARTICLE ?";
+            position:absolute;
+            top:0;
+            left:0;
+            height:100%;
+            width:100%;
+            opacity:0;
+            background: rgba($red, 0.7);
+            font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+            letter-spacing: 0.1em;
+            text-align: center;
+            padding: 8px 0;
+            color:white;
+          }
+          &:hover{
+            cursor:pointer;
+            &:after{
+              opacity:1;
+            }
+          }
+          text-align:right;
+          div{
+            float:left;
+            display:inline-block;
+            width:12%;
+            &:first-child{
+              padding-right:3px;
+            }
+          }
+        }
+        .row div.name{
+          text-align:left;
+          width:63%;
+          line-height: 12px;
+        }
+        .row div.price{
+          width:25%;
+          padding-right: 5px;
+        }
+        .name, .price{
+          font-size:14px;
+          line-height:14px;
+          span{
+            font-size:80%;
+          }
+        }
+      }
+    }
+
+    .total{
+      font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      line-height: 24px;
+      color: $red;
+      margin: 10px 20px;
+      text-align: right;
+      border-bottom: 2px solid #CECECE;
+      border-top: 2px solid #CECECE;
+      padding-bottom: 0;
+      padding-top: 5px;
+      font-size:22px;
+      span{
+        font-size:14px;
+        color: #838383;
+        float: left;
+        text-transform:uppercase;
+      }
+    }
+
+    a{
+      background:none;
+      border: none;
+      outline: none;
+      margin:0 auto;
+      display:block;
+      text-align:center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .carte-screen{
+    margin: 0 5px 25px 5px;
+    padding: 15px 15px 15px 15px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    &:before{
+      content: none;
+    }
+
+    .leftbar{
+      overflow:hidden;
+      max-width:400px;
+      margin:0 auto;
+      text-align: center;
+      .mini{
+        position:relative;
+        width:125px;
+        height:67px;
+        display:inline-block;
+        transform: translateX(0);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        outline: none;
+        cursor:pointer;
+        &:hover, &.active{
+          transform: translateX(0);
+        }
+      }
+    }
+    .content{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      &>div{
+        &>img{
+          width:100%;
+          max-width:516px;
+          margin: auto;
+          display: block;
+        }
+      }
+      .title{
+        border-bottom: 1px solid $yellow;
+        padding: 0 10px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        position: relative;
+
+        h1{
+          display:inline-block;
+          font-family: 'Ballpark-Weiner';
+          font-weight: 400;
+          font-size: 36px;
+          margin:0;
+          color: $yellow;
+          text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+        }
+
+        p{
+          display:inline-block;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          margin:0;
+          color: $yellow;
+          line-height: 15px;
+          margin-left: 10px;
+          padding: 4px 0;
+          border-left: 1px solid $yellow;
+          padding-left: 10px;
+          span{
+            font-size:80%;
+          }
+        }
+
+        .help{
+          position:absolute;
+          right:5px;
+          bottom:10px;
+          outline:none;
+          img{
+            width:25px;
+            height:25px;
+            vertical-align: middle;
+          }
+          span{
+            opacity:0;
+            color:white;
+            padding-right:10px;
+            display:none;
+          }
+        }
+
+
+      }
+      .liste{
+        height: auto;
+        padding-right:0;
+        padding-bottom:40px;
+        overflow:auto;
+        &>div{
+          width:100%;
+          height:65px;
+          background:$alt-yellow;
+          padding: 0 5px;
+          margin-top:5px;
+          position:relative;
+          .desc{
+            width: 100%;
+            padding-right: 140px;
+            h4{
+              margin:0;
+              border-bottom: 1px solid $red;
+              color: $red;
+              font-family: 'Bree Serif', serif;
+              font-weight:200;
+              font-size: 20px;
+              line-height: 26px;
+              margin-bottom:4px;
+            }
+            p{
+              color: $red;
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              font-weight:100;
+              font-size: 12px;
+              line-height: 14px;
+              margin:0;
+            }
+          }
+          .price{
+            position: absolute;
+            right:70px;
+            width:70px;
+            height:65px;
+            top:0;
+            div.btn{
+              text-align:center;
+              background:#B3AA92;
+              color: $alt-yellow;
+              font-family: 'MankSans';
+              font-weight:700;
+              border-radius:5px;
+              font-size:12px;
+              line-height:18px;
+              margin:3.5px;
+              height:17px;
+              &.active, &:hover{
+                background:#137D00;
+              }
+            }
+            div.null{
+              text-align:center;
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAABlBMVEW0q5PDuqI5JaSOAAAAGElEQVR4AWNgZGRkAAMozQiESFyIPGEaAAOoABksRSbvAAAAAElFTkSuQmCC);
+              color: $alt-yellow;
+              font-family: 'MankSans';
+              font-weight:700;
+              border-radius:5px;
+              font-size:12px;
+              line-height:18px;
+              margin:3.5px;
+              height:17px;
+            }
+          }
+          .addtocart-btn{
+            position: absolute;
+            right:2px;
+            width:62px;
+            height:59px;
+            top:0;
+            background: url("../images/addbg.jpg") center center no-repeat / cover;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3px;
+            a, div{
+              width:100%;
+              height:100%;
+              display:block;
+            }
+
+            span{
+              color: white;
+              font-size: 18px;
+              display: block;
+              padding: 3px 6px;
+              padding-right:16px;
+              text-align: right;
+              position: relative;
+              text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+              &:after{
+                content: "\20AC";
+                font-size:12px;
+                position:absolute;
+                top:3px;
+                right:6px;
+                text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ngcart-cart{
+      position: relative;
+      top: 0;
+      right: 0;
+      background: white;
+      bottom: 0;
+      width: 200px;
+      display:block;
+      margin:0 auto;
+      padding-top: 1px;
+
+      .head{
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 22px;
+        color: #D33D3D;
+        margin: 10px 20px;
+        text-align: center;
+        border-bottom: 2px solid #CECECE;
+        padding-bottom: 5px;
+      }
+
+      .table-responsive{
+        min-height: 250px;
+        height: auto;
+        display: block !important;
+        overflow: auto;
+        .table{
+          width:100%;
+          color:$red;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+
+
+          .row{
+            outline:none;
+            position:relative;
+            margin-bottom:2px;
+            padding-top:2px;
+            height:25px;
+            &:after{
+              content: "SUPPRIMER L'ARTICLE ?";
+              position:absolute;
+              top:0;
+              left:0;
+              height:100%;
+              width:100%;
+              opacity:0;
+              background: rgba($red, 0.7);
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              letter-spacing: 0.1em;
+              text-align: center;
+              padding: 8px 0;
+              color:white;
+            }
+            &:hover{
+              cursor:pointer;
+              &:after{
+                opacity:1;
+              }
+            }
+            text-align:right;
+            div{
+              float:left;
+              display:inline-block;
+              width:12%;
+              &:first-child{
+                padding-right:3px;
+              }
+            }
+          }
+          .row div.name{
+            text-align:left;
+            width:63%;
+            line-height: 12px;
+          }
+          .row div.price{
+            width:25%;
+            padding-right: 5px;
+          }
+          .name, .price{
+            font-size:14px;
+            line-height:14px;
+            span{
+              font-size:80%;
+            }
+          }
+        }
+      }
+
+      .total{
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: $red;
+        margin: 10px 20px;
+        text-align: right;
+        border-bottom: 2px solid #CECECE;
+        border-top: 2px solid #CECECE;
+        padding-bottom: 0;
+        padding-top: 5px;
+        font-size:22px;
+        span{
+          font-size:14px;
+          color: #838383;
+          float: left;
+          text-transform:uppercase;
+        }
+      }
+
+      a{
+        background:none;
+        border: none;
+        outline: none;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carte-screen{
+    margin: 0 5px 25px 5px;
+    padding: 15px 15px 15px 15px ;
+    background:transparent url('../images/carte_bg.jpg') center center no-repeat / cover;
+    height: auto;
+    position: relative;
+    border:10px solid $yellow;
+    &:before{
+      content: none;
+    }
+
+    .leftbar{
+      overflow:hidden;
+      max-width:400px;
+      margin:0 auto;
+      text-align: center;
+      .mini{
+        position:relative;
+        width:125px;
+        height:67px;
+        display:inline-block;
+        transform: translateX(0);
+        -webkit-transition: all 0.4s ease-in-out;
+        -moz-transition: all 0.4s ease-in-out;
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+        outline: none;
+        cursor:pointer;
+        &:hover, &.active{
+          transform: translateX(0);
+        }
+      }
+    }
+    .content{
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      &>div{
+        &>img{
+          width:100%;
+          max-width:516px;
+        }
+      }
+      .title{
+        border-bottom: 1px solid $yellow;
+        padding: 0 10px;
+        margin-top: 5px;
+        padding-bottom: 5px;
+        width: 100%;
+        position: relative;
+
+        h1{
+          display:block;
+          text-align:center;
+        }
+
+        p{
+          display:inline-block;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-weight: 400;
+          font-size: 14px;
+          margin:0;
+          color: $yellow;
+          line-height: 15px;
+          margin-left: 0;
+          padding: 4px 0;
+          border-left: 0;
+          padding-left: 0;
+          span{
+            font-size:80%;
+          }
+        }
+
+
+      }
+      .liste{
+        height: auto;
+        padding-right:0;
+        padding-bottom:40px;
+        overflow:auto;
+        &>div{
+          width:100%;
+          height:auto;
+          min-height:130px;
+          background:$alt-yellow;
+          padding: 0 5px;
+          margin-top:5px;
+          position:relative;
+          .desc{
+            width: 100%;
+            padding-right: 70px;
+            h4{
+              margin:0;
+              border-bottom: 1px solid $red;
+              color: $red;
+              font-family: 'Bree Serif', serif;
+              font-weight:200;
+              font-size: 20px;
+              line-height: 26px;
+              margin-bottom:4px;
+            }
+            p{
+              color: $red;
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              font-weight:100;
+              font-size: 12px;
+              line-height: 14px;
+              margin:0;
+            }
+          }
+          .price{
+            position: absolute;
+            right:0;
+            width:70px;
+            height:65px;
+            top:0;
+            div.btn{
+              text-align:center;
+              background:#B3AA92;
+              color: $alt-yellow;
+              font-family: 'MankSans';
+              font-weight:700;
+              border-radius:5px;
+              font-size:12px;
+              line-height:18px;
+              margin:3.5px;
+              height:17px;
+              &.active, &:hover{
+                background:#137D00;
+              }
+            }
+            div.null{
+              text-align:center;
+              background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAABlBMVEW0q5PDuqI5JaSOAAAAGElEQVR4AWNgZGRkAAMozQiESFyIPGEaAAOoABksRSbvAAAAAElFTkSuQmCC);
+              color: $alt-yellow;
+              font-family: 'MankSans';
+              font-weight:700;
+              border-radius:5px;
+              font-size:12px;
+              line-height:18px;
+              margin:3.5px;
+              height:17px;
+            }
+          }
+          .addtocart-btn{
+            position: absolute;
+            top:65px;
+            right:2px;
+            width:62px;
+            height:59px;
+            background: url("../images/addbg.jpg") center center no-repeat / cover;
+            font-family: 'MankSans';
+            font-weight:700;
+            border-radius:5px;
+            font-size:12px;
+            line-height:18px;
+            margin:3px;
+            a, div{
+              width:100%;
+              height:100%;
+              display:block;
+            }
+
+            span{
+              color: white;
+              font-size: 18px;
+              display: block;
+              padding: 3px 6px;
+              padding-right:16px;
+              text-align: right;
+              position: relative;
+              text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+
+              &:after{
+                content: "\20AC";
+                font-size:12px;
+                position:absolute;
+                top:3px;
+                right:6px;
+                text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    ngcart-cart{
+      position: relative;
+      top: 0;
+      right: 0;
+      background: white;
+      bottom: 0;
+      width: 200px;
+      display:block;
+      margin:0 auto;
+      padding-top: 1px;
+
+      .head{
+        font-family: 'Ballpark-Weiner';
+        font-weight: 400;
+        font-size: 22px;
+        color: #D33D3D;
+        margin: 10px 20px;
+        text-align: center;
+        border-bottom: 2px solid #CECECE;
+        padding-bottom: 5px;
+      }
+
+      .table-responsive{
+        min-height: 250px;
+        height: auto;
+        display: block !important;
+        overflow: auto;
+        .table{
+          width:100%;
+          color:$red;
+          font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+          font-size: 12px;
+
+
+          .row{
+            outline:none;
+            position:relative;
+            margin-bottom:2px;
+            padding-top:2px;
+            height:25px;
+            &:after{
+              content: "SUPPRIMER L'ARTICLE ?";
+              position:absolute;
+              top:0;
+              left:0;
+              height:100%;
+              width:100%;
+              opacity:0;
+              background: rgba($red, 0.7);
+              font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+              letter-spacing: 0.1em;
+              text-align: center;
+              padding: 8px 0;
+              color:white;
+            }
+            &:hover{
+              cursor:pointer;
+              &:after{
+                opacity:1;
+              }
+            }
+            text-align:right;
+            div{
+              float:left;
+              display:inline-block;
+              width:12%;
+              &:first-child{
+                padding-right:3px;
+              }
+            }
+          }
+          .row div.name{
+            text-align:left;
+            width:63%;
+            line-height: 12px;
+          }
+          .row div.price{
+            width:25%;
+            padding-right: 5px;
+          }
+          .name, .price{
+            font-size:14px;
+            line-height:14px;
+            span{
+              font-size:80%;
+            }
+          }
+        }
+      }
+
+      .total{
+        font-family: "Myriad Pro", Myriad, Arial, Helvetica, sans-serif;
+        font-weight: 400;
+        line-height: 24px;
+        color: $red;
+        margin: 10px 20px;
+        text-align: right;
+        border-bottom: 2px solid #CECECE;
+        border-top: 2px solid #CECECE;
+        padding-bottom: 0;
+        padding-top: 5px;
+        font-size:22px;
+        span{
+          font-size:14px;
+          color: #838383;
+          float: left;
+          text-transform:uppercase;
+        }
+      }
+
+      a{
+        background:none;
+        border: none;
+        outline: none;
+        margin:0 auto;
+        display:block;
+        text-align:center;
+      }
+    }
+  }
+}

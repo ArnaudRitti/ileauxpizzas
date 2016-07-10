@@ -18,10 +18,10 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'ngCart'
+    'ngCart',
+    'oitozero.ngSweetAlert'
   ])
   .config(function ($routeProvider, $locationProvider) {
-    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -38,17 +38,23 @@ angular
         controller: 'MenuCtrl',
         controllerAs: 'menu'
       })
-      .when('/carte', {
+      .when('/carte/:key?', {
         templateUrl: 'views/carte.html',
         controller: 'CarteCtrl',
         controllerAs: 'carte'
       })
       .when('/404', {
         templateUrl: '404.html',
-      });
+      })
+      .when('/commander', {
+        templateUrl: 'views/commander.html',
+        controller: 'CommanderCtrl',
+        controllerAs: 'commander'
+      })
+    	.otherwise({
+    		redirectTo: '/'
+    	});
 
-      $routeProvider.otherwise({redirectTo: '/404'});
-
-
+      $locationProvider.html5Mode(true);
 
   });

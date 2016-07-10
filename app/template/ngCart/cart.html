@@ -1,22 +1,22 @@
 
-<div class="alert alert-warning" role="alert" ng-show="ngCart.getTotalItems() === 0">
-    Your cart is empty
-</div>
-<div>    Header </div>
+
+<div class="head">Votre panier</div>
 
 <div class="table-responsive col-lg-12" ng-show="ngCart.getTotalItems() > 0">
-    <table class="table ngCart cart">
-        <tbody>
-        <tr ng-repeat="item in ngCart.getCart().items track by $index" ng-click="ngCart.removeItemById(item.getId())">
-            <td align="right">{{ item.getQuantity() | number }}x</td>
-            <td>{{ item.getName() }}</td>
-            <td align="right">{{ item.getTotal() | currency }}</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="table ngCart cart">
+        <div class="row" ng-repeat="item in ngCart.getCart().items track by $index" ng-click="ngCart.removeItemById(item.getId())">
+            <div align="right">{{ item.getQuantity() | number }}x</div>
+            <div class="name">{{ item.getName() }}<span ng-if="item._data"><br/>{{item._data}}</span></div>
+            <div align="right" class="price">{{ item.getTotal() | currency }}</div>
+            <p class="clearfix"></p>
+        </div>
+    </div>
 </div>
 
-<div>    Total: {{ ngCart.totalCost() | currency }} </div>
+<div class="total"><span>Total</span> {{ ngCart.totalCost() | currency }} </div>
+
+<a ng-href="commander" ng-class="{'not-active' : !ngCart.getTotalItems()}"><img src="images/valid.png" alt="Valider"/></a>
+
 <style>
     .ngCart.cart span[ng-click] {
         cursor: pointer;

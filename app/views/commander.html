@@ -1,0 +1,158 @@
+<div class="order-screen">
+  <div class="content">
+    <div class="title">
+      <h1>Validation de votre commande</h1>
+      <span class="backmenu" ng-click="backmenu(menukey)"><img src="images/arrup.png"> <span>Retour au menu</span></span>
+    </div>
+    <form class="form animate-up" name="commande" ng-submit="send()" novalidate >
+
+  <div ng-switch on="selection">
+
+  <!-- First Step -->
+  <div ng-switch-when="Step 1: Team Info">
+    <div class="radio">
+      <label>
+         à emporter
+         <input type="radio" ng-model="formData.type" value="à emporter" checked="checked" required>
+      </label>
+      <label>
+         en livraison
+         <input type="radio" ng-model="formData.type" value="en livraison" required>
+      </label>
+    </div>
+    <hr>
+    <fieldset>
+      <div class="col50">
+        <div class="form-group">
+            <label for="nom">Votre nom *</label>
+            <input type="text" class="form-control" name="nom" ng-model="formData.nom" required>
+        </div>
+      </div>
+      <div class="col50">
+        <div class="form-group">
+            <label for="prenom">Votre prénom *</label>
+            <input type="text" class="form-control" name="prenom" ng-model="formData.prenom" required>
+        </div>
+      </div>
+      <div class="col50">
+        <div class="form-group">
+            <label for="email">Adresse email *</label>
+            <input type="email" class="form-control" name="email" ng-model="formData.email" required>
+        </div>
+      </div>
+      <div class="col50">
+        <div class="form-group">
+            <label for="telephone">N° de téléphone *</label>
+            <input type="tel" class="form-control" name="telephone" ng-model="formData.telephone" required>
+        </div>
+      </div>
+    </fieldset>
+    <hr>
+    <fieldset ng-if="formData.type == 'en livraison' ">
+      <div class="col15">
+        <div class="form-group">
+            <label for="num">N° de la rue *</label>
+            <input type="number" class="form-control" name="num" ng-model="formData.num" required>
+        </div>
+      </div>
+      <div class="col50">
+        <div class="form-group">
+            <label for="rue">Nom de la rue *</label>
+            <input type="text" class="form-control" name="rue" ng-model="formData.rue" required>
+        </div>
+      </div>
+      <div class="col35">
+        <div class="form-group">
+            <label for="ville">Commune *</label>
+            <select class="form-control" name="ville" ng-model="formData.ville" required>
+              <option value=""></option>
+              <option value="Joué-Lès-Tours">Joué-Lès-Tours</option>
+              <option value="Ballan-Miré">Ballan-Miré</option>
+              <option value="Chambray Fontaines Blanches">Chambray Fontaines Blanches</option>
+              <option value="Chambray Les Perriers">Chambray Les Perriers</option>
+              <option value="Tours Les Deux Lions">Tours Les Deux Lions</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="col20">
+        <div class="form-group">
+            <label for="residence">Type de résidence</label>
+            <select class="form-control" name="residence" ng-model="formData.residence">
+              <option value=""></option>
+              <option value="Appartement">Appartement</option>
+              <option value="Maison">Maison</option>
+            </select>
+        </div>
+      </div>
+      <div class="col15">
+        <div class="form-group">
+            <label for="digicode">Digicode</label>
+            <input type="text" class="form-control" name="digicode" ng-model="formData.digicode">
+        </div>
+      </div>
+      <div class="col20">
+        <div class="form-group">
+            <label for="bat">Bâtiment / Appt.</label>
+            <input type="text" class="form-control" name="bat" ng-model="formData.bat">
+        </div>
+      </div>
+      <div class="col15">
+        <div class="form-group">
+            <label for="etage">Etage</label>
+            <input type="text" class="form-control" name="etage" ng-model="formData.etage">
+        </div>
+      </div>
+      <div class="col30">
+        <div class="form-group">
+            <label for="infos">Informations supplémentaires</label>
+            <input type="text" class="form-control" name="infos" ng-model="formData.infos">
+        </div>
+      </div>
+      <p>Merci de nous donner toutes les informations facilitant la livraison.</p>
+      <hr>
+    </fieldset>
+  </div>
+
+  <!-- Second Step -->
+  <div ng-switch-when="Step 2: Campaign Info">
+    <fieldset class="alt">
+    <div class="col100">
+      <div class="form-group">
+          <label for="reglement">Mode de règlement *</label>
+          <select class="form-control" name="reglement" ng-model="formData.reglement" required="required">
+            <option value="">Mode de règlement</option>
+            <option value="Espèces">Espèces</option>
+            <option value="Chèque">Chèque</option>
+            <option value="Ticket Restaurant">Ticket Restaurant</option>
+            <option value="Carte Bancaire">Carte Bancaire</option>
+          </select>
+          <span>(CB uniquement par télépaiement. Veuillez contacter le restaurant)</span>
+      </div>
+    </div>
+    <br/>
+    <div class="col100">
+      <div class="form-group">
+          <label for="commentaire">Commentaires (ingrédients supplémentaires, sauces, ...)</label>
+          <textarea class="form-control" name="commentaire" ng-model="formData.commentaire"></textarea>
+      </div>
+    </div>
+    </fieldset>
+    <button type="submit" ng-if="commande.$valid"><img src="images/checkout.png" alt="Valider"/></button>
+
+  </div>
+</div>
+<div class="clearfix"></div>
+<ul class="pager pull-left">
+  <li class="" ng-hide="!hasPreviousStep()" >
+    <a href="javascript:void(0);" ng-click="decrementStep()"><img src="images/arrleft.png"> Page précédente</a>
+  </li>
+  <li class="" ng-hide="!hasNextStep()" ng-class="{ 'has-error' : commande.$invalid}">
+    <a href="javascript:void(0);" ng-click="incrementStep()"><img src="images/arrright.png"> Page suivante</a>
+  </li>
+</ul>
+
+</form>
+</div>
+  <ngcart-cart></ngcart-cart>
+</div>

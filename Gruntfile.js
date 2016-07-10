@@ -77,7 +77,7 @@ module.exports = function (grunt) {
         middleware: function (connect, options) {
           var optBase = (typeof options.base === 'string') ? [options.base] : options.base,
               middleware = [require('connect-modrewrite')(['!(\\..+)$ / [L]'])]
-                .concat(optBase.map(function (path) { 
+                .concat(optBase.map(function (path) {
                   if (path.indexOf('rewrite|') === -1) {
                     return connect.static(path);
                   } else {
@@ -226,7 +226,7 @@ module.exports = function (grunt) {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
-    }, 
+    },
 
     // Compiles Sass to CSS and generates necessary files if requested
     compass: {
@@ -412,9 +412,13 @@ module.exports = function (grunt) {
           cwd: '<%= yeoman.app %>',
           dest: '<%= yeoman.dist %>',
           src: [
-            '*.{ico,png,txt}',
+            '*.{ico,png,txt,php}',
             '*.html',
-            'images/{,*/}*.{webp}',
+            '*.htaccess',
+            'images/{,*/}*.*',
+            'fonts/{,*/}*.*',
+            'datas/{,*/}*.*',
+            'template/{,*/}*.*',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
@@ -441,9 +445,9 @@ module.exports = function (grunt) {
         'compass'
       ],
       dist: [
-        'compass:dist',
-        'imagemin',
-        'svgmin'
+        'compass:dist'
+        //'imagemin',
+        //'svgmin'
       ]
     },
 
@@ -499,7 +503,7 @@ module.exports = function (grunt) {
     'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    //'filerev',
     'usemin',
     'htmlmin'
   ]);

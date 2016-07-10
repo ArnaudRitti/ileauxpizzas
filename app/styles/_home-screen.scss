@@ -1,0 +1,259 @@
+.home-screen{
+  margin: 0 5px 25px 5px;
+  padding: 16px;
+  @include background(linear-gradient(rgb(248, 212, 114), rgb(251, 238, 185)) left repeat);
+
+  .leftbar{
+    width:220px;
+    float:left;
+  }
+
+  .bienvenue{
+    font-family: 'Ballpark-Weiner';
+    font-weight: 400;
+    font-size: 28px;
+    color: $yellow;
+    background: url(../images/welcomebg.png) no-repeat center center;
+    width: 220px;
+    height: 54px;
+    line-height: 60px;
+    text-align: center;
+    text-shadow: 0px 1px 1px rgba(62, 51, 41, 0.75);
+  }
+
+  .horaires, .salle{
+    font-family: 'MankSans';
+    font-size: 16px;
+    width: 220px;
+    text-align: center;
+    color: $red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  .salle{
+    font-size: 15px;
+    text-transform: uppercase;
+    border-top: 1px solid $yellow;
+    border-bottom: 1px solid $yellow;
+    padding: 5px 0;
+    margin-bottom: 6px;
+    display: inline-block;
+  }
+
+  .phone,.adresse{
+
+    border-radius: 5px;
+    background: $red;
+    color: white;
+    font-family: 'BorisBlackBloxx';
+    font-size: 24px;
+    box-shadow: 3px 4px 5px 0px rgba(62, 51, 41, 0.75);
+    width: 220px;
+    text-align: center;
+    margin-top: 45px;
+    position: relative;
+    &:before{
+      content: "";
+      width: 25px;
+      height: 40px;
+      position: absolute;
+      top:-42px;
+      left: 50%;
+      margin-left: -12.5px;
+      background: url('../images/p.png') no-repeat center center / cover;
+    }
+  }
+  .adresse{
+    font-size: 12px;
+    padding: 2px 0;
+    span{
+      font-size: 16px;
+    }
+
+    &:before{
+      content: "";
+      width: 33px;
+      height: 27px;
+      position: absolute;
+      top:-32px;
+      left: 50%;
+      margin-left: -16.5px;
+      background: url('../images/m.png') no-repeat center center / cover;
+    }
+  }
+
+  .content{
+    width: 705px;
+    float:left;
+    padding-left:20px;
+    .img{
+      width: 688px;
+      height: 338px;
+      background:transparent url('../images/banner_frame.png') left top no-repeat;
+      padding:0 5px;
+    }
+
+    .ct-block{
+      position:relative;
+      & > div{
+        position:absolute;
+      }
+    }
+
+    .livraison{
+      left: 10px;
+      top: -15px;
+      a{
+        position: absolute;
+        top:15px;
+        right:40px;
+        transition: all 0.2s ease;
+        &:hover{
+          -webkit-filter: saturate(5);
+        }
+      }
+    }
+
+    .news{
+      background:transparent url('../images/home_news.png') left top no-repeat;
+      width: 382px;
+      height: 107px;
+      right: -15px;
+      top: -25px;
+      padding: 40px 25px 15px 32px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1024px) {
+  .home-screen{
+    .leftbar{
+      width:30%;
+    }
+    .content{
+      width: 70%;
+      float:left;
+      padding-left:20px;
+      .img{
+        display:block;
+        background-size: 100% 100%;
+        width:100%;
+        overflow: hidden;
+        padding:0;
+      }
+
+      .ct-block{
+        position:relative;
+        & > div{
+          position:relative;
+        }
+      }
+
+      .livraison{
+        top:0;
+        left:0;
+        position:relative;
+        width:315px;
+        margin:0 auto;
+        margin-top:5px;
+      }
+
+      .news{
+        background:transparent url('../images/home_news.png') left top no-repeat;
+        width: 382px;
+        height: 107px;
+        right: 0;
+        top: 0;
+        margin:0 auto;
+        margin-top:5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .home-screen{
+
+    .leftbar{
+      width:100%;
+      float:left;
+    }
+
+    .bienvenue{
+      width: 100%;
+    }
+
+    .horaires, .salle{
+      width: 50%;
+      float:left;
+    }
+
+    .phone,.adresse{
+      width: 100%;
+      float:left;
+    }
+    .content{
+      width: 100%;
+      float:left;
+      padding-left:20px;
+      .img{
+        display:none;
+      }
+
+      .ct-block{
+        position:relative;
+        & > div{
+          position:relative;
+        }
+      }
+
+      .livraison{
+        top:0;
+        left:0;
+        position:relative;
+        width:315px;
+        margin:0 auto;
+        margin-top:25px;
+      }
+
+      .news{
+        background:transparent url('../images/home_news.png') left top no-repeat;
+        width: 382px;
+        height: 107px;
+        right: 0;
+        top: 0;
+        margin:0 auto;
+        margin-top:25px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .home-screen{
+    margin: 0 5px 25px 5px;
+    padding: 16px;
+    @include background(linear-gradient(rgb(248, 212, 114), rgb(251, 238, 185)) left repeat);
+
+    .leftbar{
+      width:100%;
+      float:left;
+    }
+
+    .bienvenue{
+      width: 100%;
+    }
+
+    .horaires, .salle{
+      width: 100%;
+    }
+
+    .phone,.adresse{
+      width: 100%;
+    }
+    .content{
+      display:none;
+    }
+  }
+}

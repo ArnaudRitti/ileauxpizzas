@@ -10,6 +10,11 @@
 angular.module('ileauxpizzasApp')
   .controller('CarteCtrl', function ($scope,$http, $routeParams,$rootScope) {
 
+    $scope.isActive = false;
+    $scope.activeButton = function() {
+      $scope.isActive = !$scope.isActive;
+    }
+
     $scope.list = function(key) {
       if ($scope.selected != key) {
         $rootScope.menukey = $scope.selected = key;

@@ -62,6 +62,7 @@
         right:5px;
         bottom:10px;
         outline:none;
+        cursor:pointer;
         img{
           width:25px;
           height:25px;
@@ -278,6 +279,7 @@
     background: white;
     bottom: 30px;
     width: 200px;
+    .opencart{display: none}
     .head{
       font-family: 'Ballpark-Weiner';
       font-weight: 400;

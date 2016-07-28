@@ -21,9 +21,9 @@
         "name": "Quatro",
         "price": "30,00",
         "inside": [
-            "1 grande Pizza <small>au choix</small>",
+            "1 grande Pizza ou 2 moyennes <small>au choix</small>",
             "2 glaces 500ml ou 2 pizzas dessert ou 4 desserts individuels",
-            "4 cannettes 33cl ou 2 bouteille 1,5L"
+            "4 cannettes 33cl ou 2 bouteilles 1,5L"
         ]
     },
     {

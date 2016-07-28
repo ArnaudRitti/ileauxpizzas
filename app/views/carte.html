@@ -8,7 +8,7 @@
   <div class="content">
     <div class="title">
       <h1>La Carte</h1>
-      <p>LIVRAISON GRATUITE<br/><span>à partir de 8€ de commande</span></p>
+      <p>LIVRAISON GRATUITE<br/><span>à partir de 8,5€ de commande</span></p>
 
       <span ng-if="liste" class="help"  ng-click="showhelp()"><span>Tailles des pizzas</span><img src="images/infos.png"> </span>
     </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="price" ng-init="models[k].price = plat.prices[0]; models[k].name = plat.name; models[k].active = 0 ">
           <div ng-repeat="p in plat.prices" >
-            <div ng-if="p.size != null " class="btn {{models[k].active == $index ? 'active' : '' }}" >{{p.size}}</div>
+            <div ng-if="p.size != null " class="btn {{models[k].active == $index ? 'active' : '' }}" ng-click="models[k].price = p; models[k].name = plat.name; models[k].active = $index">{{p.size}}</div>
             <div ng-if="p.size == null " class="null">&nbsp;</div>
           </div>
         </div>
@@ -31,7 +31,6 @@
       <img src="images/carte_intro.png">
     </div>
   </div>
-  {{isActive}}
   <ngcart-cart ng-class="{'open': isActive}"></ngcart-cart>
 
 </div>

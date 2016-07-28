@@ -170,6 +170,7 @@
             line-height:18px;
             margin:3.5px;
             height:17px;
+            cursor: pointer;
             &.active, &:hover{
               background:#137D00;
             }
@@ -195,6 +196,7 @@
           top:0;
           background: url("../images/addbg.jpg") center center no-repeat / cover;
           font-family: 'MankSans';
+          cursor: pointer;
           font-weight:700;
           border-radius:5px;
           font-size:12px;
@@ -237,6 +239,7 @@
     background: white;
     bottom: 30px;
     width: 200px;
+    .opencart{display: none}
     .head{
       font-family: 'Ballpark-Weiner';
       font-weight: 400;
@@ -264,7 +267,7 @@
           position:relative;
           margin-bottom:2px;
           padding-top:2px;
-          height:25px;
+          min-height:25px;
           &:after{
             content: "SUPPRIMER L'ARTICLE ?";
             position:absolute;
@@ -342,6 +345,7 @@
       margin:0 auto;
       display:block;
       text-align:center;
+
     }
   }
 }
@@ -562,16 +566,54 @@
     }
 
     ngcart-cart{
-      position: relative;
-      top: 0;
+      position: fixed;
+      top: 65px;
       right: 0;
       background: white;
-      bottom: 0;
+      bottom: auto;
       width: 200px;
-      display:block;
-      margin:0 auto;
+      display: block;
+      margin: 0 auto;
       padding-top: 1px;
-
+      transform: translate3d(100%,0,0);
+      -webkit-transition: all 0.4s ease-in-out;
+      -moz-transition: all 0.4s ease-in-out;
+      -o-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      .opencart{
+        display: block;
+        position: absolute;
+        right: 100%;
+        top:0;
+        width: 40px;
+        height: 40px;
+        background: white;
+        background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjY0cHgiIGhlaWdodD0iNjRweCIgdmlld0JveD0iMCAwIDUxMCA1MTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMCA1MTA7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8ZyBpZD0ic2hvcHBpbmctY2FydCI+CgkJPHBhdGggZD0iTTE1Myw0MDhjLTI4LjA1LDAtNTEsMjIuOTUtNTEsNTFzMjIuOTUsNTEsNTEsNTFzNTEtMjIuOTUsNTEtNTFTMTgxLjA1LDQwOCwxNTMsNDA4eiBNMCwwdjUxaDUxbDkxLjgsMTkzLjhMMTA3LjEsMzA2ICAgIGMtMi41NSw3LjY1LTUuMSwxNy44NS01LjEsMjUuNWMwLDI4LjA1LDIyLjk1LDUxLDUxLDUxaDMwNnYtNTFIMTYzLjJjLTIuNTUsMC01LjEtMi41NS01LjEtNS4xdi0yLjU1MWwyMi45NS00My4zNWgxODguNyAgICBjMjAuNCwwLDM1LjctMTAuMiw0My4zNS0yNS41TDUwNC45LDg5LjI1YzUuMS01LjEsNS4xLTcuNjUsNS4xLTEyLjc1YzAtMTUuMy0xMC4yLTI1LjUtMjUuNS0yNS41SDEwNy4xTDg0LjE1LDBIMHogTTQwOCw0MDggICAgYy0yOC4wNSwwLTUxLDIyLjk1LTUxLDUxczIyLjk1LDUxLDUxLDUxczUxLTIyLjk1LDUxLTUxUzQzNi4wNSw0MDgsNDA4LDQwOHoiIGZpbGw9IiNkMzNkM2QiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K);
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        background-size: 60%;
+        background-position: center;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+      &.open{
+        transform: translate3d(0,0,0);
+      }
+      .count{
+        display: block;
+        background: #D33D3D;
+        color: #fff;
+        font-family: Arial,sans-serif;
+        position: absolute;
+        left: -15px;
+        top: 7px;
+        width: 25px;
+        height: 25px;
+        line-height: 27px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 12px;
+      }
       .head{
         font-family: 'Ballpark-Weiner';
         font-weight: 400;
@@ -600,7 +642,7 @@
             position:relative;
             margin-bottom:2px;
             padding-top:2px;
-            height:25px;
+            min-height:25px;
             &:after{
               content: "SUPPRIMER L'ARTICLE ?";
               position:absolute;
@@ -873,15 +915,7 @@
     }
 
     ngcart-cart{
-      position: relative;
-      top: 0;
-      right: 0;
-      background: white;
-      bottom: 0;
-      width: 200px;
-      display:block;
-      margin:0 auto;
-      padding-top: 1px;
+
 
       .head{
         font-family: 'Ballpark-Weiner';
@@ -911,7 +945,7 @@
             position:relative;
             margin-bottom:2px;
             padding-top:2px;
-            height:25px;
+            min-height:25px;
             &:after{
               content: "SUPPRIMER L'ARTICLE ?";
               position:absolute;

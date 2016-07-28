@@ -2,11 +2,12 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <base href="/">
+    <base href="/dev/">
+    <meta name="fragment" content="!" />
     <title>Restaurant L'Ile Aux Pizzas - Veritables Pizzas Italiennes</title>
     <meta name="description" content="Découvrez de veritables pizzas italiennes cuites au feu de bois.">
     <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/png" href="favicon.ico" />
     <!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /><![endif]-->
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
@@ -16,7 +17,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="bower_components/sweetalert/dist/sweet-alert.css">
     <!-- endbuild -->
   </head>
   <body ng-app="ileauxpizzasApp">
@@ -45,8 +45,8 @@
     <div class="footer">
       <div class="container">
         <div>
-          <p>L'île Aux Pizzas - 159 Bd Jean Jaurès 37300 Joué-lès-tours - Tèl. 02 47 67 15 15</p>
-          <p>&copy; 2016 L'île Aus Pizzas | Tous Droits Réservés</p>
+          <p>L'île Aux Pizzas - 159 Bd Jean Jaurès 37300 Joué-lès-tours <br/>Tèl. 02 47 67 15 15</p>
+          <!--<p>&copy; 2016 L'île Aus Pizzas | Tous Droits Réservés</p>-->
         </div>
 
         <div>
@@ -129,6 +129,11 @@
                 }
             });
         }
+
+
+        $(document).on("click", ".opencart", function() {
+            $('ngcart-cart').toggleClass('open');
+         });
     </script>
 
     <!-- build:js(.) scripts/vendor.js -->

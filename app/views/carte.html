@@ -20,17 +20,18 @@
         </div>
         <div class="price" ng-init="models[k].price = plat.prices[0]; models[k].name = plat.name; models[k].active = 0 ">
           <div ng-repeat="p in plat.prices" >
-            <div ng-if="p.size != null " class="btn {{models[k].active == $index ? 'active' : '' }}" ng-click="models[k].price = p; models[k].name = plat.name; models[k].active = $index">{{p.size}}</div>
+            <div ng-if="p.size != null " class="btn {{models[k].active == $index ? 'active' : '' }}" >{{p.size}}</div>
             <div ng-if="p.size == null " class="null">&nbsp;</div>
           </div>
         </div>
-        <ngcart-addtocart class="addtocart-btn" id="{{getitemid(models[k])}}" name="{{ models[k].name}}" data="models[k]" price="{{ models[k].price.price }}">{{ models[k].price.price }}</ngcart-addtocart>
+        <ngcart-addtocart  class="addtocart-btn" id="{{getitemid(models[k])}}" name="{{ models[k].name}}" data="models[k]" price="{{ models[k].price.price }}">{{ models[k].price.price }}</ngcart-addtocart>
       </div>
     </div>
     <div ng-if="!liste"  class="animate-up">
       <img src="images/carte_intro.png">
     </div>
   </div>
-  <ngcart-cart></ngcart-cart>
+  {{isActive}}
+  <ngcart-cart ng-class="{'open': isActive}"></ngcart-cart>
 
 </div>

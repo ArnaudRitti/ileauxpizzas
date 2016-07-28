@@ -1448,8 +1448,8 @@
                 "desc": "Bouteille 70cl",
                 "prices" : [
                     {
-                        "size": null,
-                        "price": null
+                        "size": "70cl",
+                        "price": "23"
                     },
                     {
     "size": null,

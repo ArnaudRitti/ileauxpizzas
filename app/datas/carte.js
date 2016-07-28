@@ -1168,24 +1168,6 @@
          },
          {
             "name":"Glace Häagen-Dazs",
-            "desc":"Fraise",
-            "prices":[
-               {
-                  "size":"100ml",
-                  "price":"3"
-               },
-               {
-                  "size":null,
-                  "price":null
-               },
-               {
-                  "size":null,
-                  "price":null
-               }
-            ]
-         },
-         {
-            "name":"Glace Häagen-Dazs",
             "desc":"Chocolat",
             "prices":[
                {

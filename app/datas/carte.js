@@ -420,7 +420,7 @@
          },
          {
             "name":"Bressane",
-            "desc":"Sauce tomate, poulet, champignons frais, roquefort, emmental, olives, crème fraiche",
+            "desc":"Sauce tomate, poulet, champignons frais, roquefort, emmental, olives, crème fraîche",
             "prices":[
                {
                   "size":"Petite",
@@ -492,7 +492,7 @@
          },
          {
             "name":"Boursin",
-            "desc":"Crème fraîche, pomme de terre, emmental, oignons, Boursin, viande hachèe, olives",
+            "desc":"Crème fraîche, pomme de terre, emmental, oignons, Boursin, viande hachée, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -704,7 +704,7 @@
          },
          {
             "name":"Océane",
-            "desc":"Salade verte, thon, crevettes rose, saumon fumé, huile d'olive, vinaigre balsamique, citron, sel, poivre, tomates fraîches",
+            "desc":"Salade verte, thon, crevettes roses, saumon fumé, huile d'olive, vinaigre balsamique, citron, sel, poivre, tomates fraîches",
             "prices":[
                {
                   "size":null,
@@ -744,7 +744,7 @@
             "prices":[
                {
                   "size":null,
-                  "price":"4.5"
+                  "price":"4"
                },
                {
                   "size":null,
@@ -1247,7 +1247,7 @@
       "plats":[
          {
             "name":"Coca-Cola",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1265,7 +1265,7 @@
          },
          {
             "name":"Coca-Cola Zéro",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1283,7 +1283,7 @@
          },
          {
             "name":"Fanta",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1301,7 +1301,7 @@
          },
          {
             "name":"Fanta orange",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1319,7 +1319,7 @@
          },
          {
             "name":"Fanta citron",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1337,7 +1337,7 @@
          },
          {
             "name":"7up",
-            "desc":"Cannette 33cl / Bouteille 1.5L",
+            "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
                   "size":"33cl",
@@ -1355,7 +1355,7 @@
          },
          {
             "name":"IceTea pêche",
-            "desc":"Cannette 33cl",
+            "desc":"Canette 33cl",
             "prices":[
                {
                   "size":"33cl",
@@ -1373,7 +1373,7 @@
          },
          {
             "name":"Jus d'orange",
-            "desc":"Cannette 33cl",
+            "desc":"Canette 33cl",
             "prices":[
                {
                   "size":"33cl",
@@ -1444,7 +1444,7 @@
             ]
          },
          {
-            "name":"Kronembourg",
+            "name":"Kronenbourg",
             "desc":"",
             "prices":[
                {
@@ -1552,7 +1552,7 @@
             ]
          },
          {
-            "name":"Lambbrusco rosso",
+            "name":"Lambrusco rosso",
             "desc":"Bouteille 37,5cl",
             "prices":[
                {
@@ -1570,7 +1570,7 @@
             ]
          },
          {
-            "name":"Lambbrusco",
+            "name":"Lambrusco",
             "desc":"Bouteille 75cl",
             "prices":[
                {

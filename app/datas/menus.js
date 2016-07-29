@@ -18,7 +18,7 @@
         ]
     },
     {
-        "name": "Quatro",
+        "name": "Quattro",
         "price": "30,00",
         "inside": [
             "1 grande Pizza ou 2 moyennes <small>au choix</small>",

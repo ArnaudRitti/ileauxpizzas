@@ -6,7 +6,7 @@
       "plats":[
          {
             "name":"Napolitaine",
-            "desc":"Sauce tomate, anchois, oignons, emmental, olives",
+            "desc":"Sauce tomate, anchois, oignons frais, emmental, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -96,7 +96,7 @@
          },
          {
             "name":"Provençale",
-            "desc":"Sauce tomate, tomates fraîches, champignons frais, oignons, poivrons frais, mozzarella, huile d'olive, thym, olives",
+            "desc":"Sauce tomate, tomates fraîches, champignons frais, oignons frais, poivrons frais, mozzarella, huile d'olives, thym, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -150,7 +150,7 @@
          },
          {
             "name":"Campagnarde",
-            "desc":"Sauce tomate, emmental, lardons fumés, crème fraîche, oignons, olives",
+            "desc":"Sauce tomate, emmental, lardons fumés, crème fraîche, oignons frais, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -186,7 +186,7 @@
          },
          {
             "name":"Alsacienne",
-            "desc":"Crème fraîche, jambon blanc, emmental, oignons, lardons fumés, olives",
+            "desc":"Crème fraîche, jambon supérieur, emmental, oignons frais, lardons fumés, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -222,7 +222,7 @@
          },
          {
             "name":"Atomique",
-            "desc":"Sauce tomate, jambon blanc, emmental, mozzarella, champignons frais, olives",
+            "desc":"Sauce tomate, jambon supérieur, emmental, mozzarella, champignons frais, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -240,7 +240,7 @@
          },
          {
             "name":"Bolognaise",
-            "desc":"Sauce tomate, viande hachée, emmental, oignons, thym, poivre, olives",
+            "desc":"Sauce tomate, viande hachée, emmental, oignons frais, thym, poivre, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -258,7 +258,7 @@
          },
          {
             "name":"Cannoise",
-            "desc":"Sauce tomate, viande hachée, emmental, champignons frais, huile d'olive, thym, olives",
+            "desc":"Sauce tomate, viande hachée, emmental, champignons frais, huile d'olives, thym, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -366,7 +366,7 @@
          },
          {
             "name":"Indienne",
-            "desc":"Crème fraîche, poulet, curry, emmental, oignons, champignons, olives",
+            "desc":"Crème fraîche, poulet, curry, emmental, oignons frais, champignons frais, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -384,7 +384,7 @@
          },
          {
             "name":"Kebab",
-            "desc":"Crème fraîche, Tandoori, viande kebab, oignons, tomates fraîches, emmental, olives",
+            "desc":"Crème fraîche, Tandoori, viande kebab, oignons frais, tomates fraîches, emmental, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -402,7 +402,7 @@
          },
          {
             "name":"Montagnarde",
-            "desc":"Crème fraîche, jambon blanc, pommes de terre, raclette, lardons fumés, emmental, olives",
+            "desc":"Crème fraîche, jambon supérieur, pommes de terre, raclette, lardons fumés, emmental, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -438,7 +438,7 @@
          },
          {
             "name":"Country",
-            "desc":"Crème fraîche, Tandoori, poulet, oignons, lardons fumés, emmental, olives",
+            "desc":"Crème fraîche, Tandoori, poulet, oignons frais, lardons fumés, emmental, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -456,7 +456,7 @@
          },
          {
             "name":"Gourmande",
-            "desc":"Crème fraîche, confit de gésiers, tomates fraîches, chèvre, oignons, emmental, olives",
+            "desc":"Crème fraîche, confit de gésiers, tomates fraîches, chèvre, oignons frais, emmental, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -474,7 +474,7 @@
          },
          {
             "name":"Pêcheur",
-            "desc":"Crème fraîche, thon, tomates fraîches, oignons, emmental, thym, olives",
+            "desc":"Crème fraîche, thon, tomates fraîches, oignons frais, emmental, thym, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -492,7 +492,7 @@
          },
          {
             "name":"Boursin",
-            "desc":"Crème fraîche, pomme de terre, emmental, oignons, Boursin, viande hachée, olives",
+            "desc":"Crème fraîche, pomme de terre, emmental, oignons frais, Boursin, viande hachée, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -510,7 +510,7 @@
          },
          {
             "name":"Chèvre-Miel",
-            "desc":"Crème fraîche, poulet, miel, oignons, chèvre, olives, thym",
+            "desc":"Crème fraîche, poulet, miel, oignons frais, chèvre, olives, thym",
             "prices":[
                {
                   "size":"Petite",
@@ -528,7 +528,7 @@
          },
          {
             "name":"Divine",
-            "desc":"Sauce tomate, thon, curry, courgette, oignons, crème, olives",
+            "desc":"Sauce tomate, thon, curry, courgette, oignons frais, crème, olives",
             "prices":[
                {
                   "size":"Petite",
@@ -589,7 +589,7 @@
       "plats":[
          {
             "name":"Calzone",
-            "desc":"Sauce tomate, jambon blanc, emmental, oeuf",
+            "desc":"Sauce tomate, jambon supérieur, emmental, oeuf",
             "prices":[
                {
                   "size":"Petite",
@@ -607,7 +607,7 @@
          },
          {
             "name":"Paysan",
-            "desc":"Sauce tomate, jambon blanc, emmental, chèvre, crème fraîche, lardons fumées",
+            "desc":"Sauce tomate, jambon supérieur, emmental, chèvre, crème fraîche, lardons fumés",
             "prices":[
                {
                   "size":"Petite",
@@ -668,7 +668,7 @@
       "plats":[
          {
             "name":"Salade Verte",
-            "desc":"Salade verte, tomates fraîches, huile d'olive, vinaigre balsamique, sel, poivre",
+            "desc":"Salade verte, tomates fraîches, huile d'olives, vinaigre balsamique, sel, poivre",
             "prices":[
                {
                   "size":null,
@@ -686,7 +686,7 @@
          },
          {
             "name":"Classic",
-            "desc":"Salade verte, huile d'olive, vinaigre balsamique, sel, poivre, tomates fraîches, emmental, coeur de palmier, maïs, jambon blanc, oeuf",
+            "desc":"Salade verte, huile d'olives, vinaigre balsamique, sel, poivre, tomates fraîches, emmental, coeur de palmier, maïs, jambon supérieur, oeuf",
             "prices":[
                {
                   "size":null,
@@ -704,7 +704,7 @@
          },
          {
             "name":"Océane",
-            "desc":"Salade verte, thon, crevettes roses, saumon fumé, huile d'olive, vinaigre balsamique, citron, sel, poivre, tomates fraîches",
+            "desc":"Salade verte, thon, crevettes roses, saumon fumé, huile d'olives, vinaigre balsamique, citron, sel, poivre, tomates fraîches",
             "prices":[
                {
                   "size":null,
@@ -722,7 +722,7 @@
          },
          {
             "name":"Fermière",
-            "desc":"Salade verte, huile d'olive, vinaigre balsamique, sel, poivre, maïs, emmental, poulet, oeuf, olives, tomates fraîches",
+            "desc":"Salade verte, huile d'olives, vinaigre balsamique, sel, poivre, maïs, emmental, poulet, oeuf, olives, tomates fraîches",
             "prices":[
                {
                   "size":null,
@@ -740,7 +740,7 @@
          },
          {
             "name":"Mimosa",
-            "desc":"Salade verte, huile d'olive, vinaigre balsamique, sel, poivre, oeufs mimosas, thon, tomates fraîches",
+            "desc":"Salade verte, huile d'olives, vinaigre balsamique, sel, poivre, oeufs mimosas, thon, tomates fraîches",
             "prices":[
                {
                   "size":null,
@@ -765,7 +765,7 @@
       "plats":[
          {
             "name":"Wings frits",
-            "desc":"Ailerons de poulet, sauces ketchup ou barbecue",
+            "desc":"Ailerons de poulet frits, sauces ketchup ou barbecue",
             "prices":[
                {
                   "size":"x8",
@@ -801,7 +801,7 @@
          },
          {
             "name":"Onion Rings",
-            "desc":"Rondelles d'oignons frits",
+            "desc":"Rondelles d'oignons frais frits",
             "prices":[
                {
                   "size":"x8",
@@ -818,8 +818,8 @@
             ]
          },
          {
-            "name":"Nuggets frits",
-            "desc":"Beignets de poulet, sauces ketchup ou barbecue",
+            "name":"Nuggets",
+            "desc":"Beignets de poulet frits, sauces ketchup ou barbecue",
             "prices":[
                {
                   "size":"x8",
@@ -916,7 +916,7 @@
       "plats":[
          {
             "name":"Banana Pizza (26cm)",
-            "desc":"Banane, chocolat, sucre roux, crème fraîche",
+            "desc":"Banane, chocolat liquide, sucre roux, crème fraîche",
             "prices":[
                {
                   "size":null,
@@ -934,7 +934,7 @@
          },
          {
             "name":"Golden Pizza (26cm)",
-            "desc":"Pomme, chocolat, sucre roux, crème fraîche",
+            "desc":"Pomme, chocolat liquide, sucre roux, crème fraîche",
             "prices":[
                {
                   "size":null,
@@ -952,7 +952,7 @@
          },
          {
             "name":"Hélène Pizza (26cm)",
-            "desc":"Poire, chocolat, sucre roux, crème fraîche",
+            "desc":"Poire, chocolat liquide, sucre roux, crème fraîche",
             "prices":[
                {
                   "size":null,
@@ -1005,7 +1005,7 @@
             ]
          },
          {
-            "name":"Brownies",
+            "name":"Brownie",
             "desc":"Gâteaux au chocolat & noix",
             "prices":[
                {
@@ -1023,7 +1023,7 @@
             ]
          },
          {
-            "name":"Cookies",
+            "name":"Cookie",
             "desc":null,
             "prices":[
                {
@@ -1265,24 +1265,6 @@
          },
          {
             "name":"Coca-Cola Zéro",
-            "desc":"Canette 33cl / Bouteille 1.5L",
-            "prices":[
-               {
-                  "size":"33cl",
-                  "price":"1.5"
-               },
-               {
-                  "size":"1,5L",
-                  "price":"2.5"
-               },
-               {
-                  "size":null,
-                  "price":null
-               }
-            ]
-         },
-         {
-            "name":"Fanta",
             "desc":"Canette 33cl / Bouteille 1.5L",
             "prices":[
                {
@@ -1552,34 +1534,16 @@
             ]
          },
          {
-            "name":"Lambrusco rosso",
-            "desc":"Bouteille 37,5cl",
-            "prices":[
-               {
-                  "size":"37,5cl",
-                  "price":"5"
-               },
-               {
-                  "size":null,
-                  "price":null
-               },
-               {
-                  "size":null,
-                  "price":null
-               }
-            ]
-         },
-         {
             "name":"Lambrusco",
             "desc":"Bouteille 75cl",
             "prices":[
+              {
+                 "size":"37,5cl",
+                 "price":"5"
+              },
                {
                   "size":"75cl",
                   "price":"9"
-               },
-               {
-                 "size":null,
-                 "price":null
                },
                {
                   "size":null,
